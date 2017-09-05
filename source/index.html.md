@@ -59,7 +59,7 @@ Header(s)
 
 
 ### HTTP Request
-`POST http://zlp15803.vci.att.com:8895/restservices/oce/v6/orders`
+`POST http://host:port/restservices/oce/v6/orders`
 
 
 Parameter | Mandatory | Description
@@ -603,9 +603,12 @@ Order number | yes | Every order needs to be sent with the unique order no
 }
 ```
 
+## Retrieve an order from OCE
+
+
 ### HTTP Request  to retrieve the order by BAN
 
-`GET http://zlt04345.vci.att.com:8881/restservice/inquire?[ban][ctn]=1234567891`
+`GET http://host:port/restservice/inquire?[ban][ctn]=1234567891`
 
 ### Query Parameters
 
