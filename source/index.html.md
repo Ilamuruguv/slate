@@ -8,8 +8,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - 
+  - 
 
 includes:
   - errors
@@ -68,6 +68,540 @@ Order number | yes | Every order needs to be sent with the unique order no
 
 
 
+
+> Request BODY JSON structured like this:
+
+```json
+
+{
+	"oceBitMap": "0000000000000000000000000000000000000000000000100000000100110001",
+	"version": "V11",
+	"order": {
+		"customerOrderNumber": "22-137578111080706",
+		"orderType": "CREATE",
+		"orderStatus": {
+			"status": "RECEIVED"
+		},
+		"createdDate": 1503972660672,
+		"submittedDate": 1503972660672,
+		"productGroups": {
+			"group": [{
+				"id": "GROUP_01",
+				"name": "UPGRADE_WIRELESS",
+				"type": "LINE_OF_SERVICE",
+				"sequence": 1,
+				"price": [{
+					"amount": 649.99,
+					"currencyType": "USD",
+					"priceType": "DueToday",
+					"taxDetail": {
+						"amount": 65
+					},
+					"total": 714.99
+				}, {
+					"amount": 0,
+					"currencyType": "USD",
+					"total": 0
+				}, {
+					"amount": 0,
+					"currencyType": "USD",
+					"priceType": "NRC",
+					"total": 0
+				}, {
+					"amount": 0,
+					"currencyType": "USD",
+					"priceType": "DUENOW",
+					"total": 0
+				}],
+				"characteristics": {
+					"losgCharacteristics": {
+						"losgReferenceId": "losg18040730",
+						"sequence": 1,
+						"losgType": "UP",
+						"productCategory": "WIRELESS",
+						"primaryIndicator": true,
+						"dealerCode": "K3K6I",
+						"market": "NWS",
+						"subMarket": "PNW",
+						"serviceArea": "006300008879",
+						"priceCode": "PNW",
+						"accountReference": "ACCOUNT_01",
+						"serviceLocationReference": "ADDRESS_02",
+						"wirelessLOSCharacteristics": {
+							"mobileNumber": "2069792230",
+							"upgradeQualificationDetails": [{
+								"approvalNumber": "0",
+								"newAEUCheckerIndicator": true
+							}],
+							"billingSystemId": "T"
+						},
+						"fulfillmentMethod": "DF",
+						"shippingDetailReference": "SHIPPING_INFO_01"
+					}
+				}
+			}]
+		},
+		"lineItems": {
+			"lineItem": [{
+				"id": "83993002267",
+				"sequence": 1,
+				"productCode": "prod8730224",
+				"productSKU": "6474A",
+				"billingCode": "6474A",
+				"productType": "HARDGOOD",
+				"displayName": "Apple iPhone 7 - 32GB - Gold",
+				"systemName": "PHO APL IPHONE 7 32GB GLD",
+				"action": "ADD",
+				"price": {
+					"amount": 649.99,
+					"baseAmount": 0.0,
+					"msrp": 649.99,
+					"priceType": "DueToday",
+					"taxDetail": {
+						"preCalculatedTax": {
+							"taxableCost": 649,
+							"taxableMSRP": 0,
+							"taxableUnitPrice": 649.99,
+							"orderTaxAreaId": 390950000,
+							"shipFromTaxAreaId": 431570560,
+							"shipToTaxAreaId": 480331340
+						},
+						"lineItemTaxes": [{
+							"taxLineId": 1,
+							"taxCode": "SALESTAX",
+							"memo": "SALESTAX",
+							"printName": "Sales Tax",
+							"taxable": "X",
+							"skuSpecific": "false",
+							"jurisdictionLevel": "Sales Tax",
+							"jurisdictionName": "Sales Tax",
+							"taxAmount": 65,
+							"taxRate": 0.1,
+							"taxDate": "2017-08-28"
+						}]
+					},
+					"total": 714.99
+				},
+				"locationId": "K006",
+				"payments": {
+					"payment": [{
+						"paymentOptionReference": "PAYMENT_OPTION_01"
+					}]
+				},
+				"contractDetails": {
+					"contractDisplayName": "",
+					"installmentPlanDefinition": "regular",
+					"totalSalePrice": 0.0,
+					"installmentType": "PHONE",
+					"contractType": "NOCOMMIT",
+					"contractSystem": "OPTICAL",
+					"contractSent": "N",
+					"contractLength": 0
+				},
+				"quantity": 1,
+				"groupReferences": {
+					"groupReference": ["GROUP_01"]
+				},
+				"characteristics": {
+					"wirelessLineItemCharacteristics": {
+						"nciEligibleIndicator": false
+					}
+				},
+				"hardGood": {
+					"byodIndicator": false,
+					"hardGoodType": "DEVICE",
+					"productImageUrl": "https://tst04.stage.att.com/catalog/en/skus/images/apple-iphone 7-gold-100x160.png",
+					"make": "Apple",
+					"model": "iPhone 7",
+					"shipmentCommitDate": {
+						"fromDate": 1503964800000,
+						"toDate": 1504137600000
+					},
+					"wirelessHardGoodCharacteristics": {
+						"techType": "UMTS",
+						"equipmentType": "EDGE",
+						"imeiType": "J0",
+						"phoneType": "ANY_PHONE",
+						"deviceCategory": "SP"
+					}
+				}
+			}, {
+				"id": "83993002267-1",
+				"sequence": 2,
+				"productCode": "NOT_AVAILABLE",
+				"productSKU": "84514",
+				"billingCode": "84514",
+				"productType": "HARDGOOD",
+				"displayName": "Kit_guide_eCom_Phone_13.0",
+				"systemName": "COL QSG GET STARTED CONSUMER SLIP",
+				"action": "ADD",
+				"price": {
+					"amount": 0,
+					"msrp": 0,
+					"priceType": "DueToday",
+					"taxDetail": {
+						"preCalculatedTax": {
+							"taxableCost": 0,
+							"taxableMSRP": 0,
+							"taxableUnitPrice": 0,
+							"orderTaxAreaId": 390950000,
+							"shipFromTaxAreaId": 431570560,
+							"shipToTaxAreaId": 480331340
+						},
+						"lineItemTaxes": [{
+							"taxLineId": 1,
+							"taxCode": "SALESTAX",
+							"memo": "SALESTAX",
+							"printName": "Sales Tax",
+							"taxable": "X",
+							"skuSpecific": "false",
+							"jurisdictionLevel": "Sales Tax",
+							"jurisdictionName": "Sales Tax",
+							"taxAmount": 0,
+							"taxRate": 0,
+							"taxDate": "2017-08-28"
+						}]
+					},
+					"total": 0.0
+				},
+				"locationId": "K006",
+				"payments": {
+					"payment": [{
+						"paymentOptionReference": "PAYMENT_OPTION_01"
+					}]
+				},
+				"quantity": 1,
+				"groupReferences": {
+					"groupReference": ["GROUP_01"]
+				},
+				"hardGood": {
+					"hardGoodType": "COLLATERAL"
+				}
+			}, {
+				"id": "83993002267-2",
+				"sequence": 3,
+				"productCode": "NOT_AVAILABLE",
+				"productSKU": "73023",
+				"billingCode": "73023",
+				"productType": "HARDGOOD",
+				"displayName": "Embedded Nano SIM for iPhone 7, 7plus",
+				"systemName": "Embedded SIM",
+				"action": "ADD",
+				"price": {
+					"amount": 0,
+					"msrp": 0,
+					"priceType": "DueToday",
+					"taxDetail": {
+						"preCalculatedTax": {
+							"taxableCost": 0,
+							"taxableMSRP": 0,
+							"taxableUnitPrice": 0,
+							"orderTaxAreaId": 390950000,
+							"shipFromTaxAreaId": 431570560,
+							"shipToTaxAreaId": 480331340
+						},
+						"lineItemTaxes": [{
+							"taxLineId": 1,
+							"taxCode": "SALESTAX",
+							"memo": "SALESTAX",
+							"printName": "Sales Tax",
+							"taxable": "X",
+							"skuSpecific": "false",
+							"jurisdictionLevel": "Sales Tax",
+							"jurisdictionName": "Sales Tax",
+							"taxAmount": 0,
+							"taxRate": 0,
+							"taxDate": "2017-08-28"
+						}]
+					},
+					"total": 0.0
+				},
+				"locationId": "K006",
+				"payments": {
+					"payment": [{
+						"paymentOptionReference": "PAYMENT_OPTION_01"
+					}]
+				},
+				"quantity": 1,
+				"groupReferences": {
+					"groupReference": ["GROUP_01"]
+				},
+				"hardGood": {
+					"hardGoodType": "SIM"
+				}
+			}, {
+				"id": "83993002267-5",
+				"sequence": 4,
+				"productCode": "NOT_AVAILABLE",
+				"productSKU": "NOT_AVAILABLE",
+				"billingCode": "NOT_AVAILABLE",
+				"productType": "MISC_CHARGE",
+				"displayName": "Upgrade Fee",
+				"systemName": "UPGRADE_FEE",
+				"action": "ADD",
+				"price": {
+					"amount": 0,
+					"msrp": 0,
+					"priceType": "NRC"
+				},
+				"locationId": "K006",
+				"payments": {
+					"payment": [{
+						"paymentOptionReference": "PAYMENT_OPTION_01"
+					}]
+				},
+				"quantity": 0,
+				"groupReferences": {
+					"groupReference": ["GROUP_01"]
+				}
+			}, {
+				"id": "88879ShippingFee",
+				"sequence": 5,
+				"productCode": "NOT_AVAILABLE",
+				"productSKU": "88879",
+				"billingCode": "88879",
+				"productType": "MISC_CHARGE",
+				"displayName": "ShippingFee",
+				"systemName": "SHIPPING_FEE",
+				"action": "ADD",
+				"price": {
+					"amount": 0,
+					"priceType": "DueToday",
+					"taxDetail": {
+						"preCalculatedTax": {
+							"taxableCost": 0,
+							"taxableMSRP": 14.95,
+							"taxableUnitPrice": 0,
+							"orderTaxAreaId": 390950000,
+							"shipFromTaxAreaId": 431570560,
+							"shipToTaxAreaId": 480331340
+						},
+						"lineItemTaxes": [{
+							"taxLineId": 1,
+							"taxCode": "SALESTAX",
+							"memo": "SALESTAX",
+							"printName": "Sales Tax",
+							"taxable": "X",
+							"skuSpecific": "false",
+							"jurisdictionLevel": "Sales Tax",
+							"jurisdictionName": "Sales Tax",
+							"taxAmount": 0,
+							"taxRate": 0,
+							"taxDate": "2017-08-28"
+						}]
+					},
+					"total": 0
+				},
+				"payments": {
+					"payment": [{
+						"paymentOptionReference": "PAYMENT_OPTION_01"
+					}]
+				},
+				"quantity": 1,
+				"groupReferences": {
+					"groupReference": ["GROUP_01"]
+				}
+			}]
+		},
+		"names": {
+			"name": [{
+				"id": "NAME_01",
+				"firstName": "BEDROCK",
+				"lastName": "DONOTUSE",
+				"emailAddress": "sa240y@ATT.COM",
+				"primaryContactPhones": [{
+					"phoneNumber": "4252887410",
+					"contactPhoneType": "HOME_PHONE"
+				}]
+			}]
+		},
+		"addresses": {
+			"address": [{
+				"id": "ADDRESS_01",
+				"unparsedAddress": {
+					"addressLine1": "20307 N CREEK PKWY",
+					"city": "BOTHELL",
+					"state": "WA",
+					"zip": "98011",
+					"country": "US"
+				},
+				"additionalDetails": {
+					"additionalDetail": [{
+						"code": "ValidatedAddress",
+						"value": "true"
+					}]
+				}
+			}, {
+				"id": "ADDRESS_02",
+				"addressId": "ADDRESS_02",
+				"unparsedAddress": {
+					"addressLine1": "20307 N CREEK PKWY",
+					"city": "BOTHELL",
+					"state": "WA",
+					"zip": "98011",
+					"country": "US"
+				},
+				"additionalDetails": {
+					"additionalDetail": [{
+						"code": "ValidatedAddress",
+						"value": "true"
+					}]
+				}
+			}]
+		},
+		"accounts": {
+			"account": [{
+				"id": "ACCOUNT_01",
+				"sequence": 1,
+				"accountCategory": "MOBILITY_ACCOUNT",
+				"accountSubCategory": "EXISTING",
+				"paymentArrangement": "POSTPAID",
+				"billingAccountNumber": "512127125265",
+				"billingDetail": [{
+					"nameReference": "NAME_01",
+					"addressReference": "ADDRESS_01",
+					"authentication": {
+						"dob": "_4TZ-2p-Ll",
+						"driversLicense": {},
+						"ssn": "B1VK4RRYQ"
+					},
+					"previousAddress": "N"
+				}],
+				"creditCheck": {
+					"creditCheckRanIndicator": false
+				},
+				"liabilityType": "INDIVIDUAL",
+				"accountType": "INDIVIDUAL",
+				"accountSubType": "R",
+				"enterpriseType": "IRU",
+				"b2bReference": "B2B_01",
+				"langId": "ENGLISH",
+				"market": "NWS",
+				"subMarket": "PNW",
+				"spokenLanguagePreference": "ENGLISH"
+			}]
+		},
+		"paymentOptions": {
+			"paymentOption": [{
+				"id": "PAYMENT_OPTION_01",
+				"sequence": 1,
+				"capmConfig": {
+					"merchantId": "ORDERGWCon",
+					"sourceSystem": "HARDROCK",
+					"sourceLocation": "CS",
+					"sourceUser": "HARDROCK"
+				},
+				"paymentMethod": {
+					"capm": {
+						"preAuthDetail": {
+							"authorizationCode": "OL_DF170828P01271",
+							"authorizationDate": "2017-08-28",
+							"authorizationExpirationDate": "2017-09-25",
+							"addressVerificationSystemCode": "NA",
+							"authorizationKey": "40420967"
+						},
+						"totalAmount": 714.99,
+						"creditCardLast4Digits": "2784",
+						"zipCode": "98011",
+						"creditCardType": "MASTERCARD",
+						"paymentProfileAction": "C_ORDER",
+						"giftCardIndicator": false
+					}
+				}
+			}]
+		},
+		"shippingDetails": {
+			"shippingDetail": [{
+				"id": "SHIPPING_INFO_01",
+				"sequence": 1,
+				"nameReference": "NAME_01",
+				"addressReference": "ADDRESS_01",
+				"shippingCode": "F1",
+				"shippingPriceCode": "88879",
+				"shippingMethod": "Overnight",
+				"carrierPreference": "FedEx"
+			}]
+		},
+		"b2bs": {
+			"b2b": [{
+				"id": "B2B_01",
+				"b2bContractProvider": "ATTWS",
+				"b2bContractType": "CBE",
+				"b2bFAN": "00030561",
+				"b2bSkipUpgradeEligibilityIndicator": false,
+				"b2bIgnoreDepositRequiredIndicator": false,
+				"b2bFANBusinessName": "DEMO TEST FAN"
+			}]
+		},
+		"totalPrice": {
+			"price": [{
+				"amount": 649.99,
+				"currencyType": "USD",
+				"priceType": "DueToday",
+				"taxDetail": {
+					"amount": 65
+				},
+				"total": 714.99
+			}, {
+				"amount": 0,
+				"currencyType": "USD",
+				"priceType": "RC",
+				"total": 0
+			}, {
+				"amount": 0,
+				"currencyType": "USD",
+				"priceType": "NRC",
+				"total": 0
+			}, {
+				"amount": 0,
+				"currencyType": "USD",
+				"priceType": "DUENOW",
+				"total": 0
+			}]
+		},
+		"creditPolicy": {
+			"crsmOnFlag": false
+		},
+		"agentCode": "K3K6I",
+		"agentLocation": "K3K6I",
+		"orderContact": {
+			"nameReference": "NAME_01",
+			"primaryEmailAddress": "sa240y@ATT.COM"
+		},
+		"salesChannel": "E",
+		"orderSource": {
+			"locale": "en_US",
+			"clientType": "DESKTOP",
+			"channel": "DE-MOBILITY",
+			"application": "MYATTSALES",
+			"browserId": "A001295391884",
+			"additionalDetails": {
+				"additionalDetail": [{
+					"code": "ORDER_STATUS_URL",
+					"value": "https://opss-qa2.stage.att.com/checkmyorder/processOSRequest.rt?onum=22-137578111080706&appid=OCE&isCRU=false&context=56NshdhRd6dJkIm%2F3VovBzMkCA9ar7Vz%2BNH7GhPrQMCOBYDuSBOgyylxPvbSMYdm%2BFDk1KhZv3Np7PgnMwydtgXsLfm%2Be02ASjCf39Ays1itpMbhYA1n6stOyJS13%2BZGZSIzP%2FbXR9PAGWU8Cm5iQeRU9aM%2BCyCXhceh7Qk5kI2XQAOMIIUukPUbQuuqn5USUskoXIsao%2BUl6VNK9BVW1tAIgxsIwPbiXonlFqcRWcNukJ4TVfRtM5%2FIoQfpDgkoHTAIH%2F2ToZVONRsXBfrLMIcP%2BYlwUIDYj0qwXvgLS%2FVhVppaFNhkL4NROyVEs6tFZrDFk8RDeETRUNLePgmvttXQ6wkIjl5dRw0dfm8feInDG%2FCzWLSvB7nheg5IChy5yMHuYr6m3xd0M%2FhltsneSNeSuSc6%2F07WYR0NZT565wdNwxCCSQayhGJe5WQz7ub%2FrKRA2q34gueqprBAPkQUK6dfdaONNE9ffEV%2Bh24yhBwL51%2FP6%2FeP3Hi2xBHx1wDqrwPpcJaBV89UW%2BJZIJUtEEc9KddB8Bi1rZNf4VmcK1lYCPm08MuZ4FLcxFl32C1G"
+				}, {
+					"code": "SENDER",
+					"value": "CCC_Zippy"
+				}]
+			}
+		},
+		"encryptedIndicator": true,
+		"commonOrderIndicator": true,
+		"summaryCreatedIndicator": false,
+		"requestId": "f9522be6-d882-4511-977e-1ac62a3660cd"
+	}
+}	
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "application": "MYATTSALES",
+  "channel": "DE-MOBILITY",
+  "customerOrderNumber": "22-137578111080706"
+}
+```
 
 ### HTTP Request  to retrieve the order by BAN
 
