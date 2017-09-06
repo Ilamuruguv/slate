@@ -67,25 +67,42 @@ Parameter | Mandatory | Description
 Order number | yes | Every order needs to be sent with the unique order no 
 
 ![postman](/images/postman.png) Please download the [Postman collection] (https://www.getpostman.com/collections/2aa708aa5350486de815) from this link.
+$ ./tree-md .
+# Project tree
 
-1. Step 1
-2. Step 2
-3. Step 3
-   * Item 3a
-   * Item 3b
-   * Item 3c
+.
+ * [tree-md](./tree-md)
+ * [dir2](./dir2)
+   * [file21.ext](./dir2/file21.ext)
+   * [file22.ext](./dir2/file22.ext)
+   * [file23.ext](./dir2/file23.ext)
+ * [dir1](./dir1)
+   * [file11.ext](./dir1/file11.ext)
+   * [file12.ext](./dir1/file12.ext)
+ * [file_in_root.ext](./file_in_root.ext)
+ * [README.md](./README.md)
+ * [dir3](./dir3)
    
 
 > Request BODY JSON structured like this:
 
 ```json
 
-1. Step 1
-2. Step 2
-3. Step 3
-   * Item 3a
-   * Item 3b
-   * Item 3c
+$ ./tree-md .
+# Project tree
+
+.
+ * [tree-md](./tree-md)
+ * [dir2](./dir2)
+   * [file21.ext](./dir2/file21.ext)
+   * [file22.ext](./dir2/file22.ext)
+   * [file23.ext](./dir2/file23.ext)
+ * [dir1](./dir1)
+   * [file11.ext](./dir1/file11.ext)
+   * [file12.ext](./dir1/file12.ext)
+ * [file_in_root.ext](./file_in_root.ext)
+ * [README.md](./README.md)
+ * [dir3](./dir3)
    
 {
 	"oceBitMap": "0000000000000000000000000000000000000000000000100000000100110001",
