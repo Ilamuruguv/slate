@@ -63,10 +63,10 @@ Header(s)
 
 
 Parameter | Mandatory | Description
---------- | ------- | -----------
+--------- | --------- | -----------
 Order number | yes | Every order needs to be sent with the unique order no 
 
-
+Please download the [Postman collection] https://www.getpostman.com/collections/2aa708aa5350486de815 from this link.
 
 
 > Request BODY JSON structured like this:
