@@ -68,11 +68,25 @@ Order number | yes | Every order needs to be sent with the unique order no
 
 ![postman](/images/postman.png) Please download the [Postman collection] (https://www.getpostman.com/collections/2aa708aa5350486de815) from this link.
 
+1. Step 1
+2. Step 2
+3. Step 3
+   * Item 3a
+   * Item 3b
+   * Item 3c
+   
 
 > Request BODY JSON structured like this:
 
 ```json
 
+1. Step 1
+2. Step 2
+3. Step 3
+   * Item 3a
+   * Item 3b
+   * Item 3c
+   
 {
 	"oceBitMap": "0000000000000000000000000000000000000000000000100000000100110001",
 	"version": "V11",
