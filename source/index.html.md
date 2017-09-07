@@ -100,6 +100,28 @@ operation			| Body : OrderStatus	| String	| No	| Operation
 falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
 falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
 
+
+###productGroups
+
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+
+group |	Body : productGroups |	Array |	No	| 1 to n : Group Record
+
+
+
+###group
+
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+
+id				| Body : Group	| String	| No	| Group Id
+name			| Body : Group	| String	| No	| Group Name
+type			| Body : Group	| String	| No	| Group Type
+sequence		| Body : Group	| String	| No	| Group Sequence
+characteristics | Body : Group	| Array		| No    | 1to1 : Characteristics
+
+
 > Request BODY JSON structured like this:
 
 
