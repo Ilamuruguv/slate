@@ -11,7 +11,6 @@ toc_footers:
   - 
 
 includes:
-  -	chatlink
   - errors
 
 search: true
