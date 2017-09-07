@@ -61,10 +61,11 @@ Header(s)
 ### HTTP Request
 `POST http://host:port/restservices/oce/v6/orders`
 
+### The Order Object
 
 	
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------				
+Parameter | Location     | Data Type | Required | Value Rules
+--------- | ------------ | --------- | -------- | -----------				
 customerOrderNumber		| Body -> Order	| String | No	 | Customer Order Number.
 orderType				| Body -> Order	| String | No	 | Order Type
 orderStatus				| Body -> Order	| Array	 | No	 | 1 -> 1 : orderStatus Record
@@ -81,10 +82,6 @@ orderContact			| Body -> Order	| Array	 | No	 | 1 -> 1 : Order contact
 orderSource				| Body -> Order	| Array	 | No	 | 1 -> 1 : Order Source
 
 
-
-Parameter | Mandatory | Description
---------- | --------- | -----------
-Order number | yes | Every order needs to be sent with the unique order no 
 
 ![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
