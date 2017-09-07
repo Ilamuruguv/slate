@@ -101,20 +101,18 @@ falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
 falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
 
 
-###productGroups
+### productGroups
 
 Parameter | Location | Data Type | Required | Value Rules
 --------- | -------- | --------- | -------- | -----------
-
-group |	Body : productGroups |	Array |	No	| 1 to n : Group Record
-
+group     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
 
 
-###group
+
+### group
 
 Parameter | Location | Data Type | Required | Value Rules
 --------- | -------- | --------- | -------- | -----------
-
 id				| Body : Group	| String	| No	| Group Id
 name			| Body : Group	| String	| No	| Group Name
 type			| Body : Group	| String	| No	| Group Type
