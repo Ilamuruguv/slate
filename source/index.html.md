@@ -67,25 +67,6 @@ Header(s)
 
 
 
-### The Order Object
-
-	
-Parameter | Location     | Data Type | Required | Value Rules
---------- | ------------ | --------- | -------- | -----------				
-customerOrderNumber		| Body : Order	| String | No	 | Customer Order Number.
-orderType				| Body : Order	| String | No	 | Order Type
-orderStatus				| Body : Order	| Array	 | No	 | 1 to 1 : orderStatus Record
-createdDate				| Body : Order	| Long	 | No	 | Created Date
-submittedDate			| Body : Order	| Long	 | No	 | Submitted Date
-updatedDate				| Body : Order	| Long	 | No	 | Updated Date
-productGroups			| Body : Order	| Array	 | No	 | 1 to n : Group
-lineItems				| Body : Order	| Array	 | No	 | 1 to n : LineItem
-businessTobusinesss		| Body : Order	| Array	 | No	 | 1 to n : B2B
-names					| Body : Order	| Array	 | No	 | 1 to n : Name
-accounts				| Body : Order	| Array	 | No	 | 1 to n : Account
-schedulingDetails		| Body : Order	| Array	 | No	 | 1 to n : Scheduling Info
-orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
-[orderSource](#orderStatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
 
 > Request BODY JSON structured like this:
 
@@ -612,6 +593,26 @@ orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
 	}
 }	
 ```
+### The Order Object
+
+	
+Parameter | Location     | Data Type | Required | Value Rules
+--------- | ------------ | --------- | -------- | -----------				
+customerOrderNumber		| Body : Order	| String | No	 | Customer Order Number.
+orderType				| Body : Order	| String | No	 | Order Type
+orderStatus				| Body : Order	| Array	 | No	 | 1 to 1 : orderStatus Record
+createdDate				| Body : Order	| Long	 | No	 | Created Date
+submittedDate			| Body : Order	| Long	 | No	 | Submitted Date
+updatedDate				| Body : Order	| Long	 | No	 | Updated Date
+productGroups			| Body : Order	| Array	 | No	 | 1 to n : Group
+lineItems				| Body : Order	| Array	 | No	 | 1 to n : LineItem
+businessTobusinesss		| Body : Order	| Array	 | No	 | 1 to n : B2B
+names					| Body : Order	| Array	 | No	 | 1 to n : Name
+accounts				| Body : Order	| Array	 | No	 | 1 to n : Account
+schedulingDetails		| Body : Order	| Array	 | No	 | 1 to n : Scheduling Info
+orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
+[orderSource](#orderStatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
+
 
 ###orderStatus
 
