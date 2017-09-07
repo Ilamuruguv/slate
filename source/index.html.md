@@ -24,8 +24,24 @@ Welcome to the OCE API Documentation! You can use our API to access Order API en
 This example API documentation page was created with [Slate](https://github.com/tripit/slate).
 
 # Authentication
+Header(s)
+		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
+		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
 
-> To authorize, use this code:
+
+
+# Orders
+
+## Post an order to OCE
+
+
+### HTTP Request
+`POST http://host:port/restservices/oce/v6/orders`
+
+
+
+![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
+
 
 ```java
 		
@@ -112,27 +128,12 @@ curl "api_endpoint_here"
 ```
 
 ```javascript
-Header(s)
-		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
-		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
+
 		
 		function jscalltoOCE () {	
 			ajax http call imeplelemtation
 		} 
 ```
-
-
-# Orders
-
-## Post an order to OCE
-
-
-### HTTP Request
-`POST http://host:port/restservices/oce/v6/orders`
-
-
-
-![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
 
 
