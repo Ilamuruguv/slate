@@ -64,9 +64,9 @@ Header(s)
 
 #### The Order Object
 
-ATTRIBUTES 
+#ATTRIBUTES 
 	
-	Parameter				Location		Data Type	Req’d	Value Rules
+Parameter				Location		Data Type	Req’d	Value Rules
 ---------			  | --------      | --------- | ----- | -----------				
 customerOrderNumber		| Body - Order	| String | No	 | Customer Order Number.
 orderType				| Body – Order	| String | No	 | Order Type
