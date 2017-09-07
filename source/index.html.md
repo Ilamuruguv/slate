@@ -66,7 +66,7 @@ Parameter | Mandatory | Description
 --------- | --------- | -----------
 Order number | yes | Every order needs to be sent with the unique order no 
 
-![postman](/images/postman.png) Please download the [Postman collection] (https://www.getpostman.com/collections/2aa708aa5350486de815) from this link.
+![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
 
 > Request BODY JSON structured like this:
