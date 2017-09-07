@@ -3,7 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - java 
-  - DME2
   - shell
   - javascript
 
@@ -42,14 +41,10 @@ Header(s)
 
 ![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
+> To test the order, use this code:
+
 
 ```java
-		
-		
-		
-```
-
-```DME2
 	try { 
 			
 			System.setProperty("AFT_DME2_HTTP_EXCHANGE_TRACE_ON", "true"); 
