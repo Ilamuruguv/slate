@@ -73,6 +73,7 @@ Header(s)
 Parameter | Location     | Data Type | Required | Value Rules
 --------- | ------------ | --------- | -------- | -----------				
 customerOrderNumber		| Body : Order	| String | No	 | Customer Order Number.
+	String	
 orderType				| Body : Order	| String | No	 | Order Type
 orderStatus				| Body : Order	| Array	 | No	 | 1 to 1 : orderStatus Record
 createdDate				| Body : Order	| Long	 | No	 | Created Date
