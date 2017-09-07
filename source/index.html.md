@@ -61,6 +61,12 @@ Header(s)
 ### HTTP Request
 `POST http://host:port/restservices/oce/v6/orders`
 
+
+
+![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
+
+
+
 ### The Order Object
 
 	
@@ -83,8 +89,15 @@ orderSource				| Body -> Order	| Array	 | No	 | 1 -> 1 : Order Source
 
 
 
-![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
+orderStatus
 
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+status				| Body – OrderStatus	| String	| No 	| Status
+subStatus			| Body – OrderStatus	| String	| No	| Sub Status
+operation			| Body – OrderStatus	| String	| No	| Operation
+falloutCode			| Body – OrderStatus	| String 	| No	| Fall Out Code
+falloutDescription	| Body – OrderStatus	| String	| No	| Fall out Description
 
 > Request BODY JSON structured like this:
 
