@@ -64,7 +64,6 @@ Header(s)
 
 #### The Order Object
 
-#ATTRIBUTES 
 	
 Parameter | Location | Data Type | Req’d | Value Rules
 --------- | -------- | --------- | ----- | -----------				
