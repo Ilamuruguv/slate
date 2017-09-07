@@ -62,6 +62,30 @@ Header(s)
 `POST http://host:port/restservices/oce/v6/orders`
 
 
+#### The Order Object
+
+ATTRIBUTES 
+	
+	Parameter				Location		Data Type	Req’d	Value Rules
+---------			  | --------      | --------- | ----- | -----------				
+customerOrderNumber		| Body - Order	| String | No	 | Customer Order Number.
+orderType				| Body – Order	| String | No	 | Order Type
+orderStatus				| Body – Order	| Array	 | No	 | 1 - 1 : orderStatus Record
+createdDate				| Body – Order	| Long	 | No	 | Created Date
+submittedDate			| Body – Order	| Long	 | No	 | Submitted Date
+updatedDate				| Body – Order	| Long	 | No	 | Updated Date
+productGroups			| Body – Order	| Array	 | No	 | 1 – n : Group
+lineItems				| Body – Order	| Array	 | No	 | 1 – n : LineItem
+businessTobusinesss		| Body – Order	| Array	 | No	 | 1 – n : B2B
+names					| Body – Order	| Array	 | No	 | 1 – n : Name
+accounts				| Body – Order	| Array	 | No	 | 1 – n : Account
+schedulingDetails		| Body – Order	| Array	 | No	 | 1 – n : Scheduling Info
+orderContact			| Body – Order	| Array	 | No	 | 1 – 1 : Order contact
+orderSource				| Body – Order	| Array	 | No	 | 1 – 1 : Order Source
+
+	 
+
+
 Parameter | Mandatory | Description
 --------- | --------- | -----------
 Order number | yes | Every order needs to be sent with the unique order no 
