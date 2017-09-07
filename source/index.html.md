@@ -3,7 +3,7 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - java 
-  - other
+  - DME2
   - shell
   - javascript
 
@@ -28,15 +28,80 @@ This example API documentation page was created with [Slate](https://github.com/
 > To authorize, use this code:
 
 ```java
-	Header(s)
-		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
-		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
+		
+		
+		
 ```
 
-```other
-	Header(s)
-		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
-		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
+```DME2
+	try { 
+			
+			System.setProperty("AFT_DME2_HTTP_EXCHANGE_TRACE_ON", "true"); 
+			
+			System.setProperty("AFT_LATITUDE", "34.087063"); 
+			System.setProperty("AFT_LONGITUDE", "-84.275422");
+			
+			System.setProperty("AFT_ENVIRONMENT", "AFTUAT"); 
+			System.setProperty("AFT_DME2_CONN_IDLE_TIMEOUTMS", "3000"); 
+			System.setProperty("DME2.DEBUG", "false");
+			
+			//FOR HTTPS Non Prod
+			System.setProperty("AFT_DME2_CLIENT_IGNORE_SSL_CONFIG", "false");
+			System.setProperty("AFT_DME2_CLIENT_SSL_INCLUDE_PROTOCOLS", "TLSv1.2,TLSv1.1,TLSv1,TLS1.0, TLS2.0");
+			
+			
+			System.setProperty("AFT_DME2_CLIENT_KEYSTORE_PASSWORD", " ");
+			
+			String userName = "USER";
+			String password = "AUTH";
+			String userpass = userName + ":" + password;
+			String 	basicAuth = "Basic " + new String(new Base64().encode(userpass.getBytes()));
+			
+			System.out.println(basicAuth);
+			
+			HashMap<String, String> headerMap = new HashMap<String, String>(); 
+			headerMap.put("Accept", "application/json"); 
+			headerMap.put("Content-type", "application/json");
+			headerMap.put("Authorization", basicAuth);
+			headerMap.put("X-APP-Bitmap", "0000000000000001000000000000000000000000000001010000000000000000");
+			// Note: envConetxt will determine the Test and Dev. AFT_LATITUDE and AFT_LONGITUDE will be looked and near by location will be taken
+			//Current Dev Env
+		
+			
+			
+			String service = "http://URL/restservices/oce/v5?version=6&envContext=TEST&routeOffer=DEFAULT";
+			
+			
+			String context = "/orders";
+			String jsonRequestFile = "REQEST JSON";
+			
+			DME2Client sender = new DME2Client(new URI(service), 30000); 
+			FileReader fileReader = new FileReader(new File(jsonRequestFile));
+			JSONParser parser = new JSONParser();
+			Object obj = parser.parse(fileReader); 
+			JSONObject json =  (JSONObject) obj;
+			
+			sender.setAllowAllHttpReturnCodes(true);// Don't break on code!=200 
+			sender.setMethod("POST"); 
+			sender.setHeaders(headerMap); 
+			sender.setPayload(json.toString());
+			
+			// This is required to determine which the REST service for the particular application
+			sender.setSubContext(context); 
+			
+			DME2RestfulHandler replyHandler = new DME2RestfulHandler(service); 
+			sender.setReplyHandler(replyHandler); 
+			sender.send(); 
+			
+			ResponseInfo reply = replyHandler.getResponseInfo(120000); 
+			
+			
+
+		} catch (DME2Exception de) { 
+			de.printStackTrace(); 
+		} catch (Exception e) { 
+			e.printStackTrace(); 
+		}
 ```
 
 ```shell
@@ -50,6 +115,10 @@ curl "api_endpoint_here"
 Header(s)
 		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
 		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
+		
+		function jscalltoOCE () {	
+			ajax http call imeplelemtation
+		} 
 ```
 
 
