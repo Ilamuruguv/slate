@@ -73,7 +73,6 @@ Header(s)
 Parameter | Location     | Data Type | Required | Value Rules
 --------- | ------------ | --------- | -------- | -----------				
 customerOrderNumber		| Body : Order	| String | No	 | Customer Order Number.
-	String	
 orderType				| Body : Order	| String | No	 | Order Type
 orderStatus				| Body : Order	| Array	 | No	 | 1 to 1 : orderStatus Record
 createdDate				| Body : Order	| Long	 | No	 | Created Date
@@ -87,39 +86,6 @@ accounts				| Body : Order	| Array	 | No	 | 1 to n : Account
 schedulingDetails		| Body : Order	| Array	 | No	 | 1 to n : Scheduling Info
 orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
 [orderSource](#orderStatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
-
-
-
-###orderStatus
-
-
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-status				| Body : OrderStatus	| String	| No 	| Status
-subStatus			| Body : OrderStatus	| String	| No	| Sub Status
-operation			| Body : OrderStatus	| String	| No	| Operation
-falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
-falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
-
-
-### productGroups
-
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-group     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
-
-
-
-### group
-
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-id				| Body : Group	| String	| No	| Group Id
-name			| Body : Group	| String	| No	| Group Name
-type			| Body : Group	| String	| No	| Group Type
-sequence		| Body : Group	| String	| No	| Group Sequence
-characteristics | Body : Group	| Array		| No    | 1to1 : Characteristics
-
 
 > Request BODY JSON structured like this:
 
@@ -646,6 +612,39 @@ characteristics | Body : Group	| Array		| No    | 1to1 : Characteristics
 	}
 }	
 ```
+
+###orderStatus
+
+
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+status				| Body : OrderStatus	| String	| No 	| Status
+subStatus			| Body : OrderStatus	| String	| No	| Sub Status
+operation			| Body : OrderStatus	| String	| No	| Operation
+falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
+falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
+
+
+### productGroups
+
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+group     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
+
+
+
+### group
+
+Parameter | Location | Data Type | Required | Value Rules
+--------- | -------- | --------- | -------- | -----------
+id				| Body : Group	| String	| No	| Group Id
+name			| Body : Group	| String	| No	| Group Name
+type			| Body : Group	| String	| No	| Group Type
+sequence		| Body : Group	| String	| No	| Group Sequence
+characteristics | Body : Group	| Array		| No    | 1to1 : Characteristics
+
+
+
 
 > The above command returns JSON structured like this:
 
