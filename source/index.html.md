@@ -89,15 +89,16 @@ orderSource				| Body -> Order	| Array	 | No	 | 1 -> 1 : Order Source
 
 
 
-orderStatus
+### The orderStatus Object
+
 
 Parameter | Location | Data Type | Required | Value Rules
 --------- | -------- | --------- | -------- | -----------
-status				| Body – OrderStatus	| String	| No 	| Status
-subStatus			| Body – OrderStatus	| String	| No	| Sub Status
-operation			| Body – OrderStatus	| String	| No	| Operation
-falloutCode			| Body – OrderStatus	| String 	| No	| Fall Out Code
-falloutDescription	| Body – OrderStatus	| String	| No	| Fall out Description
+status				| Body : OrderStatus	| String	| No 	| Status
+subStatus			| Body : OrderStatus	| String	| No	| Sub Status
+operation			| Body : OrderStatus	| String	| No	| Operation
+falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
+falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
 
 > Request BODY JSON structured like this:
 
