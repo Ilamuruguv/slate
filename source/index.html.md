@@ -685,7 +685,7 @@ names					| Body : Order	| Array	 | No	 | 1 to n : Name
 accounts				| Body : Order	| Array	 | No	 | 1 to n : Account
 schedulingDetails		| Body : Order	| Array	 | No	 | 1 to n : Scheduling Info
 orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
-[orderSource](#orderStatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
+[orderSource](#orderstatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
 
 
 ###orderStatus
@@ -704,7 +704,7 @@ falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
 
 Parameter | Location | Data Type | Required | Value Rules
 --------- | -------- | --------- | -------- | -----------
-group     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
+[group](#group)     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
 
 
 
@@ -716,7 +716,7 @@ id				| Body : Group	| String	| No	| Group Id
 name			| Body : Group	| String	| No	| Group Name
 type			| Body : Group	| String	| No	| Group Type
 sequence		| Body : Group	| String	| No	| Group Sequence
-characteristics | Body : Group	| Array		| No    | 1to1 : Characteristics
+[characteristics](#characteristics) | Body : Group	| Array		| No    | 1to1 : Characteristics
 
 
 
