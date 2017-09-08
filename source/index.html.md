@@ -39,7 +39,7 @@ Header(s)
 	
 			
 
-# ProcessOrder Federated API
+# ProcessOrder API
 		OCE process order API accepts the JSON payload  which complaints to the API specifications and returns the JSON acknowledgement response.  Please refer the [order](#order) json strucuture explained in below.
 	
 
