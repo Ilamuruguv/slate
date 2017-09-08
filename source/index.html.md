@@ -49,7 +49,7 @@ Header(s)
 
 
 
-![postman](/images/postman.png) Get the [Postman collection] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
+![postman](/images/postman.png) Get the [Postman collection for NEW DTV standalone] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
 > To test the order, use this code:
 
@@ -130,6 +130,7 @@ Header(s)
 curl "api_endpoint_here"
   -H "Authorization: Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M="
   -H "X-APP-Bitmap: 0000000000000001000000000000000000000000000001010000000000000000"
+  -
 ```
 
 ```javascript
@@ -671,53 +672,53 @@ curl "api_endpoint_here"
 ### The Order Object
 
 	
-Parameter | Location     | Data Type | Required | Value Rules
---------- | ------------ | --------- | -------- | -----------				
-customerOrderNumber		| Body : Order	| String | No	 | Customer Order Number.
-orderType				| Body : Order	| String | No	 | Order Type
-orderStatus				| Body : Order	| Array	 | No	 | 1 to 1 : orderStatus Record
-createdDate				| Body : Order	| Long	 | No	 | Created Date
-submittedDate			| Body : Order	| Long	 | No	 | Submitted Date
-updatedDate				| Body : Order	| Long	 | No	 | Updated Date
-productGroups			| Body : Order	| Array	 | No	 | 1 to n : Group
-lineItems				| Body : Order	| Array	 | No	 | 1 to n : LineItem
-businessTobusinesss		| Body : Order	| Array	 | No	 | 1 to n : B2B
-names					| Body : Order	| Array	 | No	 | 1 to n : Name
-accounts				| Body : Order	| Array	 | No	 | 1 to n : Account
-schedulingDetails		| Body : Order	| Array	 | No	 | 1 to n : Scheduling Info
-orderContact			| Body : Order	| Array	 | No	 | 1 to 1 : Order contact
-[orderSource](#orderstatus)				| Body : Order	| Array	 | No	 | 1 to 1 : Order Source
+Parameter | Data Type | Required | Value Rules
+--------- | --------- | -------- | -----------				
+customerOrderNumber			| String | No	 | Customer Order Number.
+orderType					| String | No	 | Order Type
+orderStatus					| Array	 | No	 | 1 to 1 : orderStatus Record
+createdDate					| Long	 | No	 | Created Date
+submittedDate				| Long	 | No	 | Submitted Date
+updatedDate					| Long	 | No	 | Updated Date
+productGroups				| Array	 | No	 | 1 to n : Group
+lineItems					| Array	 | No	 | 1 to n : LineItem
+businessTobusinesss			| Array	 | No	 | 1 to n : B2B
+names						| Array	 | No	 | 1 to n : Name
+accounts					| Array	 | No	 | 1 to n : Account
+schedulingDetails			| Array	 | No	 | 1 to n : Scheduling Info
+orderContact				| Array	 | No	 | 1 to 1 : Order contact
+[orderSource](#orderstatus)	| Array	 | No	 | 1 to 1 : Order Source
 
 
 ###orderStatus
 
 
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-status				| Body : OrderStatus	| String	| No 	| Status
-subStatus			| Body : OrderStatus	| String	| No	| Sub Status
-operation			| Body : OrderStatus	| String	| No	| Operation
-falloutCode			| Body : OrderStatus	| String 	| No	| Fall Out Code
-falloutDescription	| Body : OrderStatus	| String	| No	| Fall out Description
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+status				Status	| String	| No 	| Status
+subStatus			Status	| String	| No	| Sub Status
+operation			Status	| String	| No	| Operation
+falloutCode			Status	| String 	| No	| Fall Out Code
+falloutDescription	Status	| String	| No	| Fall out Description
 
 
 ### productGroups
 
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-[group](#group)     |	Body : productGroups |	Array |	No	| 1 to n : Group Record
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[group](#group)    |	Array |	No	| 1 to n : Group Record
 
 
 
 ### group
 
-Parameter | Location | Data Type | Required | Value Rules
---------- | -------- | --------- | -------- | -----------
-id				| Body : Group	| String	| No	| Group Id
-name			| Body : Group	| String	| No	| Group Name
-type			| Body : Group	| String	| No	| Group Type
-sequence		| Body : Group	| String	| No	| Group Sequence
-[characteristics](#characteristics) | Body : Group	| Array		| No    | 1to1 : Characteristics
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id					| String	| No	| Group Id
+name				| String	| No	| Group Name
+type				| String	| No	| Group Type
+sequence			| String	| No	| Group Sequence
+[characteristics](#characteristics) 	| Array		| No    | 1to1 : Characteristics
 
 
 
