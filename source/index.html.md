@@ -1046,7 +1046,7 @@ submittedDate	|	Long	|	No	|	Date Order is submitted in buy flow in case of Creat
 [Names](#names)	|	Array	|	R	|	This Group will contain the list of names in the Order
 [Addresses](#addresses)	|	Array	|	R	|	This Group will contain the list of addresses in the Order
 [accounts](#accounts)	|	Array	|	R	|	This Group will contain the list of accounts in the Order
-[promotions](#promotions)		Array		O		This Group will contain the list of promotions in the Order
+[promotions](#promotions)	|	Array	|	O	|	This Group will contain the list of promotions in the Order
 [schedulingDetails](#schedulingdetails)	|	Array	|	R	|	This Group will contain the list of schedulingdetails in the Order
 [serviceFacilityQualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
 [conflictingServiceDetails](#conflictingservicedetails)	|	Array	|	O	|	conflictingServiceDetails
