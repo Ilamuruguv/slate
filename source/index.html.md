@@ -1157,18 +1157,20 @@ CommonLOSCharacteristics	|	Complex type	|	O	|	Characteristics for Common type of
 }
 ```
 
-## Retrieve an order from OCE
+# Inquire Order API 
 
+### HTTP(s) Request  to retrieve the order by BAN/CTN
 
-### HTTP Request  to retrieve the order by BAN
-
-`GET http://host:port/restservice/inquire?[ban][ctn]=1234567891`
+`GET http(s)://host:port/restservice/inquire?[ban][ctn]=1234567891`
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Required | Description
 --------- | ------- | -----------
 BAN/CTN  | yes | BAN/CTN no of the order
+
+> http://host:port/restservice/inquire?ban=1234567891
+  
 
 > The above command returns JSON structured like this:
 
