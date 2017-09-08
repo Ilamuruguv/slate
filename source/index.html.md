@@ -24,7 +24,8 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Authentication
 Header(s)
-		Use the Bitmao and the Auth token generated with the user id and password using base64 encoding. 
+		Use the Bitmap and the Auth token generated with the user id and password using base64 encoding. 
+		
 		X-APP-Bitmap 0000000000000001000000000000000000000000000001010000000000000000	
 		Authorization Basic U0hBUkVEU0VSVklDRVM6U1RBUlRIUjMzUk9DS1M=
 
