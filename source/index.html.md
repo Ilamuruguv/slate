@@ -39,19 +39,19 @@ Header(s)
 	
 			
 
-# Orders
-
-## Post an order to OCE
-
-
-### HTTP Request
-`POST http://host:port/restservices/oce/v6/orders`
+# ProcessOrder Federated API
+		OCE process order API accepts the JSON payload  which complaints to the API specifications and returns the JSON acknowledgement response.  Please refer the [order](#order) json strucuture explained in below.
+	
 
 
+### HTTP(S) Request
+`POST http(s)://host:port/restservices/oce/v6/orders`
 
-![postman](/images/postman.png) Get the [Postman collection for NEW DTV standalone] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link.
 
-> To test the order, use this code:
+
+![postman](/images/postman.png) Get the [Postman collection for NEW DTV standalone] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link to test with the OCE test instance.
+
+> To test the process order api in java dme2 client, use the below code:
 
 
 ```java
@@ -1032,7 +1032,9 @@ curl "api_endpoint_here"
   }
 }
 ```
-### The Order Object
+
+### order
+
 
 Parameter | Data Type | Required | Value Rules
 --------- | --------- | -------- | -----------				
