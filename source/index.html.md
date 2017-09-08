@@ -1157,7 +1157,7 @@ CommonLOSCharacteristics	|	Complex type	|	O	|	Characteristics for Common type of
 }
 ```
 
-# Inquire Order API 
+# InquireOrder API 
 
 ### HTTP(s) Request  to retrieve the order by BAN/CTN
 
