@@ -714,11 +714,54 @@ Parameter  | Data Type | Required | Value Rules
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-id					| String	| No	| Group Id
-name				| String	| No	| Group Name
-type				| String	| No	| Group Type
-sequence			| String	| No	| Group Sequence
-[characteristics](#characteristics) 	| Array		| No    | 1to1 : Characteristics
+id	|	ID	|	R	|	Unique identifier to identify a particular Product Group 
+name	|	String	|	O	|	Unique name to identify a partial Product Group 
+type	|	String	|	O	|	This value identifies if the group is a line of service 
+sequence	|	integer	|	O	|	This value starts with 1 and indicates the sequencing of the line of services in the Order transaction 
+price	|	Complex type	|	O	|	This price info structure is used to identify subtotal i.e., amount and total price for an LOSG. 
+promotionRefs	|		|	O	|	Indicates a promotion ref after all promotions applied. Eg: for a combined bill promotion 
+Groups Chars	|		|	O	|	Characteristics for Group type - line of service group (LOSG) 
+SharedPlan Chars	|		|	O	|	Characteristics for Group type- SHARED_PLAN 
+Package Chars	|		|	O	|	Applicable if OMS Product/Package Code is available 
+LOSG Chars	|		|	O	|	Characteristics for a particular line of service group (LOSG) 
+LoSGReferenceId	|	String	|	O	|	Unique value across system. This value uniquely identifies the line of service group ID 
+LOSGSequenceNumber	|	Integer	|	O	|	This is Unique for an order and the value has to be only numeric ( Max 4 digits) for Common Order or if IsCommonOrder Flag is true 
+
+
+### LoSGType 
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum	|	String	|	R	|	This field indicates the type of the line of service group. The applicable values are
+
+ 
+### ActionType 
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum	|	String	|	O	|	ActionType indicates the type of service request. Action Type is required for all service Care Request (SCR).  
+ActionReason	|	String	|	O	|	Action Reason will have the reason for the service request. 
+ProductCategory	|	String	|	R	|	This field indicates the product category of the Line of Service group. 
+DealerCode	|	String	|	O	|	Compensation Code, also known as Dealer Code or Commission Code. Used to compute gross ads and to track orange orders in backend systems. Client systems should pass Z0066 
+Market	|	String	|	O	|	Indicates the geographical location where the sale happened. Market is required for downstream billing systems. 
+SubMarket	|	String	|	O	|	Indicates the geographical location where the sale happened. Sub Market is required for downstream billing systems. 
+PreferredAreaCode	|	String	|	O	|	Used for customer if they like to have any area code 
+ServiceArea	|	String	|	O	|	Indicates the area for the service provided 
+ServiceAreaName	|	String	|	O	|	Indicates the name of the area for the service provided 
+AccountRef	|	String	|	O	|	Indicates the account level information reference 
+RequestedExecutionDate	|	date	|	O	|	Future Requested Activation Date 
+EffectiveDate	|	date	|	O	|	Plan/Feature Effective Date 
+LoSGStatus	|	String	|	O	|	Indicates the status of line of service group 
+ServiceLocationRef	|	Simple type	|	O	|	Indicates the primary place of use address 
+SubscriberNameRef	|	Simple type	|	O	|	Indicates the primary place of use Name, This Name also specifies the product Admin in case of marketplace orders 
+TCRef	|	Complex type	|	O	|	Terms and Conditions is applicable for LOSG Specific T&C
+ProfileCode	|		|	O	|	Used for Product Exclusion through IFSQ (InquireFiberSeriveQualification) 
+SchedulingInfoRef	|	Simple type	|	O	|	Indicates the Ref for scheduling information 
+InstallationInstructions	|	Simple type	|	O	|	Indicates the installation instructions in an order/service 
+InstallType	|	Simple type	|	O	|	Indicates the type of installation Eg: Tech Install, Self-Install 
+InternetLOSChars	|	Complex type	|	O	|	Characteristics for Internet type of line of services only. 
+IPTVLOSChars	|	Complex type	|	O	|	Characteristics for IPTV type of line of services only. 
+DirecTVLOSChars	|	Complex type	|	O	|	Characteristics for DIRECTV type of line of services only. 
+VOIPLOSChars	|	Complex type	|	O	|	Characteristics for VOIP type of line of services only. 
+CommonLOSCharacteristics	|	Complex type	|	O	|	Characteristics for Common type of line of services only.
 
 
 
