@@ -151,543 +151,923 @@ curl "api_endpoint_here"
 ```json
 
 {
-	"oceBitMap": "0000000000000000000000000000000000000000000000100000000100110001",
-	"version": "V11",
-	"order": {
-		"customerOrderNumber": "22-137578111080706",
-		"orderType": "CREATE",
-		"orderStatus": {
-			"status": "RECEIVED"
-		},
-		"createdDate": 1503972660672,
-		"submittedDate": 1503972660672,
-		"productGroups": {
-			"group": [{
-				"id": "GROUP_01",
-				"name": "UPGRADE_WIRELESS",
-				"type": "LINE_OF_SERVICE",
-				"sequence": 1,
-				"price": [{
-					"amount": 649.99,
-					"currencyType": "USD",
-					"priceType": "DueToday",
-					"taxDetail": {
-						"amount": 65
-					},
-					"total": 714.99
-				}, {
-					"amount": 0,
-					"currencyType": "USD",
-					"total": 0
-				}, {
-					"amount": 0,
-					"currencyType": "USD",
-					"priceType": "NRC",
-					"total": 0
-				}, {
-					"amount": 0,
-					"currencyType": "USD",
-					"priceType": "DUENOW",
-					"total": 0
-				}],
-				"characteristics": {
-					"losgCharacteristics": {
-						"losgReferenceId": "losg18040730",
-						"sequence": 1,
-						"losgType": "UP",
-						"productCategory": "WIRELESS",
-						"primaryIndicator": true,
-						"dealerCode": "K3K6I",
-						"market": "NWS",
-						"subMarket": "PNW",
-						"serviceArea": "006300008879",
-						"priceCode": "PNW",
-						"accountReference": "ACCOUNT_01",
-						"serviceLocationReference": "ADDRESS_02",
-						"wirelessLOSCharacteristics": {
-							"mobileNumber": "2069792230",
-							"upgradeQualificationDetails": [{
-								"approvalNumber": "0",
-								"newAEUCheckerIndicator": true
-							}],
-							"billingSystemId": "T"
-						},
-						"fulfillmentMethod": "DF",
-						"shippingDetailReference": "SHIPPING_INFO_01"
-					}
-				}
-			}]
-		},
-		"lineItems": {
-			"lineItem": [{
-				"id": "83993002267",
-				"sequence": 1,
-				"productCode": "prod8730224",
-				"productSKU": "6474A",
-				"billingCode": "6474A",
-				"productType": "HARDGOOD",
-				"displayName": "Apple iPhone 7 - 32GB - Gold",
-				"systemName": "PHO APL IPHONE 7 32GB GLD",
-				"action": "ADD",
-				"price": {
-					"amount": 649.99,
-					"baseAmount": 0.0,
-					"msrp": 649.99,
-					"priceType": "DueToday",
-					"taxDetail": {
-						"preCalculatedTax": {
-							"taxableCost": 649,
-							"taxableMSRP": 0,
-							"taxableUnitPrice": 649.99,
-							"orderTaxAreaId": 390950000,
-							"shipFromTaxAreaId": 431570560,
-							"shipToTaxAreaId": 480331340
-						},
-						"lineItemTaxes": [{
-							"taxLineId": 1,
-							"taxCode": "SALESTAX",
-							"memo": "SALESTAX",
-							"printName": "Sales Tax",
-							"taxable": "X",
-							"skuSpecific": "false",
-							"jurisdictionLevel": "Sales Tax",
-							"jurisdictionName": "Sales Tax",
-							"taxAmount": 65,
-							"taxRate": 0.1,
-							"taxDate": "2017-08-28"
-						}]
-					},
-					"total": 714.99
-				},
-				"locationId": "K006",
-				"payments": {
-					"payment": [{
-						"paymentOptionReference": "PAYMENT_OPTION_01"
-					}]
-				},
-				"contractDetails": {
-					"contractDisplayName": "",
-					"installmentPlanDefinition": "regular",
-					"totalSalePrice": 0.0,
-					"installmentType": "PHONE",
-					"contractType": "NOCOMMIT",
-					"contractSystem": "OPTICAL",
-					"contractSent": "N",
-					"contractLength": 0
-				},
-				"quantity": 1,
-				"groupReferences": {
-					"groupReference": ["GROUP_01"]
-				},
-				"characteristics": {
-					"wirelessLineItemCharacteristics": {
-						"nciEligibleIndicator": false
-					}
-				},
-				"hardGood": {
-					"byodIndicator": false,
-					"hardGoodType": "DEVICE",
-					"productImageUrl": "https://tst04.stage.att.com/catalog/en/skus/images/apple-iphone 7-gold-100x160.png",
-					"make": "Apple",
-					"model": "iPhone 7",
-					"shipmentCommitDate": {
-						"fromDate": 1503964800000,
-						"toDate": 1504137600000
-					},
-					"wirelessHardGoodCharacteristics": {
-						"techType": "UMTS",
-						"equipmentType": "EDGE",
-						"imeiType": "J0",
-						"phoneType": "ANY_PHONE",
-						"deviceCategory": "SP"
-					}
-				}
-			}, {
-				"id": "83993002267-1",
-				"sequence": 2,
-				"productCode": "NOT_AVAILABLE",
-				"productSKU": "84514",
-				"billingCode": "84514",
-				"productType": "HARDGOOD",
-				"displayName": "Kit_guide_eCom_Phone_13.0",
-				"systemName": "COL QSG GET STARTED CONSUMER SLIP",
-				"action": "ADD",
-				"price": {
-					"amount": 0,
-					"msrp": 0,
-					"priceType": "DueToday",
-					"taxDetail": {
-						"preCalculatedTax": {
-							"taxableCost": 0,
-							"taxableMSRP": 0,
-							"taxableUnitPrice": 0,
-							"orderTaxAreaId": 390950000,
-							"shipFromTaxAreaId": 431570560,
-							"shipToTaxAreaId": 480331340
-						},
-						"lineItemTaxes": [{
-							"taxLineId": 1,
-							"taxCode": "SALESTAX",
-							"memo": "SALESTAX",
-							"printName": "Sales Tax",
-							"taxable": "X",
-							"skuSpecific": "false",
-							"jurisdictionLevel": "Sales Tax",
-							"jurisdictionName": "Sales Tax",
-							"taxAmount": 0,
-							"taxRate": 0,
-							"taxDate": "2017-08-28"
-						}]
-					},
-					"total": 0.0
-				},
-				"locationId": "K006",
-				"payments": {
-					"payment": [{
-						"paymentOptionReference": "PAYMENT_OPTION_01"
-					}]
-				},
-				"quantity": 1,
-				"groupReferences": {
-					"groupReference": ["GROUP_01"]
-				},
-				"hardGood": {
-					"hardGoodType": "COLLATERAL"
-				}
-			}, {
-				"id": "83993002267-2",
-				"sequence": 3,
-				"productCode": "NOT_AVAILABLE",
-				"productSKU": "73023",
-				"billingCode": "73023",
-				"productType": "HARDGOOD",
-				"displayName": "Embedded Nano SIM for iPhone 7, 7plus",
-				"systemName": "Embedded SIM",
-				"action": "ADD",
-				"price": {
-					"amount": 0,
-					"msrp": 0,
-					"priceType": "DueToday",
-					"taxDetail": {
-						"preCalculatedTax": {
-							"taxableCost": 0,
-							"taxableMSRP": 0,
-							"taxableUnitPrice": 0,
-							"orderTaxAreaId": 390950000,
-							"shipFromTaxAreaId": 431570560,
-							"shipToTaxAreaId": 480331340
-						},
-						"lineItemTaxes": [{
-							"taxLineId": 1,
-							"taxCode": "SALESTAX",
-							"memo": "SALESTAX",
-							"printName": "Sales Tax",
-							"taxable": "X",
-							"skuSpecific": "false",
-							"jurisdictionLevel": "Sales Tax",
-							"jurisdictionName": "Sales Tax",
-							"taxAmount": 0,
-							"taxRate": 0,
-							"taxDate": "2017-08-28"
-						}]
-					},
-					"total": 0.0
-				},
-				"locationId": "K006",
-				"payments": {
-					"payment": [{
-						"paymentOptionReference": "PAYMENT_OPTION_01"
-					}]
-				},
-				"quantity": 1,
-				"groupReferences": {
-					"groupReference": ["GROUP_01"]
-				},
-				"hardGood": {
-					"hardGoodType": "SIM"
-				}
-			}, {
-				"id": "83993002267-5",
-				"sequence": 4,
-				"productCode": "NOT_AVAILABLE",
-				"productSKU": "NOT_AVAILABLE",
-				"billingCode": "NOT_AVAILABLE",
-				"productType": "MISC_CHARGE",
-				"displayName": "Upgrade Fee",
-				"systemName": "UPGRADE_FEE",
-				"action": "ADD",
-				"price": {
-					"amount": 0,
-					"msrp": 0,
-					"priceType": "NRC"
-				},
-				"locationId": "K006",
-				"payments": {
-					"payment": [{
-						"paymentOptionReference": "PAYMENT_OPTION_01"
-					}]
-				},
-				"quantity": 0,
-				"groupReferences": {
-					"groupReference": ["GROUP_01"]
-				}
-			}, {
-				"id": "88879ShippingFee",
-				"sequence": 5,
-				"productCode": "NOT_AVAILABLE",
-				"productSKU": "88879",
-				"billingCode": "88879",
-				"productType": "MISC_CHARGE",
-				"displayName": "ShippingFee",
-				"systemName": "SHIPPING_FEE",
-				"action": "ADD",
-				"price": {
-					"amount": 0,
-					"priceType": "DueToday",
-					"taxDetail": {
-						"preCalculatedTax": {
-							"taxableCost": 0,
-							"taxableMSRP": 14.95,
-							"taxableUnitPrice": 0,
-							"orderTaxAreaId": 390950000,
-							"shipFromTaxAreaId": 431570560,
-							"shipToTaxAreaId": 480331340
-						},
-						"lineItemTaxes": [{
-							"taxLineId": 1,
-							"taxCode": "SALESTAX",
-							"memo": "SALESTAX",
-							"printName": "Sales Tax",
-							"taxable": "X",
-							"skuSpecific": "false",
-							"jurisdictionLevel": "Sales Tax",
-							"jurisdictionName": "Sales Tax",
-							"taxAmount": 0,
-							"taxRate": 0,
-							"taxDate": "2017-08-28"
-						}]
-					},
-					"total": 0
-				},
-				"payments": {
-					"payment": [{
-						"paymentOptionReference": "PAYMENT_OPTION_01"
-					}]
-				},
-				"quantity": 1,
-				"groupReferences": {
-					"groupReference": ["GROUP_01"]
-				}
-			}]
-		},
-		"names": {
-			"name": [{
-				"id": "NAME_01",
-				"firstName": "BEDROCK",
-				"lastName": "DONOTUSE",
-				"emailAddress": "sa240y@ATT.COM",
-				"primaryContactPhones": [{
-					"phoneNumber": "4252887410",
-					"contactPhoneType": "HOME_PHONE"
-				}]
-			}]
-		},
-		"addresses": {
-			"address": [{
-				"id": "ADDRESS_01",
-				"unparsedAddress": {
-					"addressLine1": "20307 N CREEK PKWY",
-					"city": "BOTHELL",
-					"state": "WA",
-					"zip": "98011",
-					"country": "US"
-				},
-				"additionalDetails": {
-					"additionalDetail": [{
-						"code": "ValidatedAddress",
-						"value": "true"
-					}]
-				}
-			}, {
-				"id": "ADDRESS_02",
-				"addressId": "ADDRESS_02",
-				"unparsedAddress": {
-					"addressLine1": "20307 N CREEK PKWY",
-					"city": "BOTHELL",
-					"state": "WA",
-					"zip": "98011",
-					"country": "US"
-				},
-				"additionalDetails": {
-					"additionalDetail": [{
-						"code": "ValidatedAddress",
-						"value": "true"
-					}]
-				}
-			}]
-		},
-		"accounts": {
-			"account": [{
-				"id": "ACCOUNT_01",
-				"sequence": 1,
-				"accountCategory": "MOBILITY_ACCOUNT",
-				"accountSubCategory": "EXISTING",
-				"paymentArrangement": "POSTPAID",
-				"billingAccountNumber": "512127125265",
-				"billingDetail": [{
-					"nameReference": "NAME_01",
-					"addressReference": "ADDRESS_01",
-					"authentication": {
-						"dob": "_4TZ-2p-Ll",
-						"driversLicense": {},
-						"ssn": "B1VK4RRYQ"
-					},
-					"previousAddress": "N"
-				}],
-				"creditCheck": {
-					"creditCheckRanIndicator": false
-				},
-				"liabilityType": "INDIVIDUAL",
-				"accountType": "INDIVIDUAL",
-				"accountSubType": "R",
-				"enterpriseType": "IRU",
-				"b2bReference": "B2B_01",
-				"langId": "ENGLISH",
-				"market": "NWS",
-				"subMarket": "PNW",
-				"spokenLanguagePreference": "ENGLISH"
-			}]
-		},
-		"paymentOptions": {
-			"paymentOption": [{
-				"id": "PAYMENT_OPTION_01",
-				"sequence": 1,
-				"capmConfig": {
-					"merchantId": "ORDERGWCon",
-					"sourceSystem": "HARDROCK",
-					"sourceLocation": "CS",
-					"sourceUser": "HARDROCK"
-				},
-				"paymentMethod": {
-					"capm": {
-						"preAuthDetail": {
-							"authorizationCode": "OL_DF170828P01271",
-							"authorizationDate": "2017-08-28",
-							"authorizationExpirationDate": "2017-09-25",
-							"addressVerificationSystemCode": "NA",
-							"authorizationKey": "40420967"
-						},
-						"totalAmount": 714.99,
-						"creditCardLast4Digits": "2784",
-						"zipCode": "98011",
-						"creditCardType": "MASTERCARD",
-						"paymentProfileAction": "C_ORDER",
-						"giftCardIndicator": false
-					}
-				}
-			}]
-		},
-		"shippingDetails": {
-			"shippingDetail": [{
-				"id": "SHIPPING_INFO_01",
-				"sequence": 1,
-				"nameReference": "NAME_01",
-				"addressReference": "ADDRESS_01",
-				"shippingCode": "F1",
-				"shippingPriceCode": "88879",
-				"shippingMethod": "Overnight",
-				"carrierPreference": "FedEx"
-			}]
-		},
-		"b2bs": {
-			"b2b": [{
-				"id": "B2B_01",
-				"b2bContractProvider": "ATTWS",
-				"b2bContractType": "CBE",
-				"b2bFAN": "00030561",
-				"b2bSkipUpgradeEligibilityIndicator": false,
-				"b2bIgnoreDepositRequiredIndicator": false,
-				"b2bFANBusinessName": "DEMO TEST FAN"
-			}]
-		},
-		"totalPrice": {
-			"price": [{
-				"amount": 649.99,
-				"currencyType": "USD",
-				"priceType": "DueToday",
-				"taxDetail": {
-					"amount": 65
-				},
-				"total": 714.99
-			}, {
-				"amount": 0,
-				"currencyType": "USD",
-				"priceType": "RC",
-				"total": 0
-			}, {
-				"amount": 0,
-				"currencyType": "USD",
-				"priceType": "NRC",
-				"total": 0
-			}, {
-				"amount": 0,
-				"currencyType": "USD",
-				"priceType": "DUENOW",
-				"total": 0
-			}]
-		},
-		"creditPolicy": {
-			"crsmOnFlag": false
-		},
-		"agentCode": "K3K6I",
-		"agentLocation": "K3K6I",
-		"orderContact": {
-			"nameReference": "NAME_01",
-			"primaryEmailAddress": "sa240y@ATT.COM"
-		},
-		"salesChannel": "E",
-		"orderSource": {
-			"locale": "en_US",
-			"clientType": "DESKTOP",
-			"channel": "DE-MOBILITY",
-			"application": "MYATTSALES",
-			"browserId": "A001295391884",
-			"additionalDetails": {
-				"additionalDetail": [{
-					"code": "ORDER_STATUS_URL",
-					"value": "https://opss-qa2.stage.att.com/checkmyorder/processOSRequest.rt?onum=22-137578111080706&appid=OCE&isCRU=false&context=56NshdhRd6dJkIm%2F3VovBzMkCA9ar7Vz%2BNH7GhPrQMCOBYDuSBOgyylxPvbSMYdm%2BFDk1KhZv3Np7PgnMwydtgXsLfm%2Be02ASjCf39Ays1itpMbhYA1n6stOyJS13%2BZGZSIzP%2FbXR9PAGWU8Cm5iQeRU9aM%2BCyCXhceh7Qk5kI2XQAOMIIUukPUbQuuqn5USUskoXIsao%2BUl6VNK9BVW1tAIgxsIwPbiXonlFqcRWcNukJ4TVfRtM5%2FIoQfpDgkoHTAIH%2F2ToZVONRsXBfrLMIcP%2BYlwUIDYj0qwXvgLS%2FVhVppaFNhkL4NROyVEs6tFZrDFk8RDeETRUNLePgmvttXQ6wkIjl5dRw0dfm8feInDG%2FCzWLSvB7nheg5IChy5yMHuYr6m3xd0M%2FhltsneSNeSuSc6%2F07WYR0NZT565wdNwxCCSQayhGJe5WQz7ub%2FrKRA2q34gueqprBAPkQUK6dfdaONNE9ffEV%2Bh24yhBwL51%2FP6%2FeP3Hi2xBHx1wDqrwPpcJaBV89UW%2BJZIJUtEEc9KddB8Bi1rZNf4VmcK1lYCPm08MuZ4FLcxFl32C1G"
-				}, {
-					"code": "SENDER",
-					"value": "CCC_Zippy"
-				}]
-			}
-		},
-		"encryptedIndicator": true,
-		"commonOrderIndicator": true,
-		"summaryCreatedIndicator": false,
-		"requestId": "f9522be6-d882-4511-977e-1ac62a3660cd"
-	}
-}	
+  "customerOrderNumber" : "20-301100009625088",
+  "orderType" : "CREATE",
+  "createdDate" : 1503370818288,
+  "submittedDate" : 1503371365453,
+  "productGroups" : {
+    "group" : [ {
+      "id" : "GROUP_01",
+      "name" : "Package",
+      "type" : "PACKAGE",
+      "sequence" : 1,
+      "characteristics" : {
+        "packageCharacteristics" : {
+          "category" : "OFFER",
+          "code" : "422383389",
+          "type" : "NEW"
+        }
+      }
+    }, {
+      "id" : "GROUP_02",
+      "name" : "XTRA All Included",
+      "type" : "LINE_OF_SERVICE",
+      "sequence" : 2,
+      "characteristics" : {
+        "losgCharacteristics" : {
+          "losgReferenceId" : "dtv",
+          "sequence" : 1,
+          "losgType" : "NEW",
+          "productCategory" : "DIRECTV",
+          "dealerCode" : "Z0066",
+          "accountReference" : "ACCOUNT_01",
+          "serviceLocationReference" : "ADDRESS_01",
+          "serviceQualificationReference" : "SERVICE_QLFY_01",
+          "termsAndConditionReferences" : {
+            "termsAndConditionReference" : [ "TC_02" ]
+          },
+          "schedulingDetailReference" : "SCHEDULINGINFO_01",
+          "direcTVLOSCharacteristics" : {
+            "offerLanguage" : "English",
+            "dealerId" : "1782681",
+            "marketingSourceCode" : "7111",
+            "moveInOrder" : "N"
+          },
+          "fulfillmentMethod" : "DF",
+          "additionalDetails" : {
+            "additionalDetail" : [ {
+              "type" : "OMRR",
+              "code" : "parentComponentCode",
+              "value" : "ATTDVMAIN"
+            } ]
+          }
+        }
+      }
+    } ]
+  },
+  "lineItems" : {
+    "lineItem" : [ {
+      "id" : "99465092577",
+      "productCode" : "P103354",
+      "productSKU" : "sku7650336",
+      "billingCode" : "88849634",
+      "productType" : "PLAN",
+      "displayName" : "XTRA All Included",
+      "systemName" : "DTV:XTRA all included",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 70.00,
+        "currencyType" : "USD",
+        "msrp" : 124.00,
+        "priceType" : "RC",
+        "total" : 70.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_01" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "ATTDTV",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTV",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "BasePkg",
+              "attributeValue" : "XTRAAll",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "ATTDV",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "ATTDV",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTV",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "programming",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "programming",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.ProgrammingCoreNew.ProgrammingCoreNew.Languages.AIBasePackages.AllInclusive.BasePackages.BasePackages",
+              "attributeCode" : "optionKey",
+              "attributeValue" : "P103354",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      }
+    }, {
+      "id" : "99465092995",
+      "productCode" : "H00000038927",
+      "productSKU" : "sku7650361",
+      "billingCode" : "2",
+      "productType" : "HARDGOOD",
+      "displayName" : "Genie HD DVR",
+      "systemName" : "IncludedGenieHDDVR",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTVGenie",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE|DTVGenie",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "ATTDTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "DTVGenie",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "numberOfTvs",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "FVPD1Request" ]
+            } ],
+            "componentPath" : "DTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "materialCode",
+              "attributeValue" : "100003360",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "SKUCode",
+              "attributeValue" : "H00000038927",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "equipment",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "equipment",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverTotalOrderCheck.ReceiverTotalOrderCount.OnHowManyReceivers",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_TVCount@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            }, {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverLeased.ReceiverLeased.ReceiverLeased",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_H00000038927@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTVCP",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV|DTVCP",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "installationType",
+              "attributeValue" : "Tech",
+              "attributeOperations" : [ {
+                "operationNames" : [ "IWFARequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "DVR"
+      }
+    }, {
+      "id" : "99465092996",
+      "productCode" : "H00000000745",
+      "productSKU" : "sku7650365",
+      "billingCode" : "2",
+      "productType" : "HARDGOOD",
+      "displayName" : "Wireless Genie Mini",
+      "systemName" : "IncludedWirelessGenieMini",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTVWirelessGenie",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE|DTVWirelessGenie",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "ATTDTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "DTVWGenieMini",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "numberOfTvs",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "FVPD1Request" ]
+            } ],
+            "componentPath" : "DTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "materialCode",
+              "attributeValue" : "100003357",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "SKUCode",
+              "attributeValue" : "H00000000745",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "equipment",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "equipment",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverTotalOrderCheck.ReceiverTotalOrderCount.OnHowManyReceivers",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_TVCount@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            }, {
+              "attributeKey" : "DWSNew.Hardware.Hardware.HomeMediaCenterClient.HomeMediaCenterClient.HomeMediaCenterClient.HomeMediaCenterClientLeased",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_H00000000745@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTVCP",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV|DTVCP",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "installationType",
+              "attributeValue" : "Tech",
+              "attributeOperations" : [ {
+                "operationNames" : [ "IWFARequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "STB"
+      }
+    }, {
+      "id" : "99465092997",
+      "productCode" : "P6376",
+      "productSKU" : "sku7650429",
+      "billingCode" : "111",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "Advanced Receiver Fee ",
+      "systemName" : "DTV Included Advanced Receiver Fee",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : { }
+    }, {
+      "id" : "99465092998",
+      "productCode" : "H00000038927",
+      "productSKU" : "sku7680379",
+      "billingCode" : "88855444",
+      "productType" : "HARDGOOD",
+      "displayName" : "Genie HD DVR",
+      "systemName" : "DTV:NRCDueToday:Included Genie HD DVR",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 299.00,
+        "priceType" : "NRC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_02" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "lineItemIdentifier",
+            "componentOperations" : [ {
+              "operationNames" : [ "CalculateTaxRequest" ]
+            } ],
+            "componentPath" : "lineItemIdentifier",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "omsProductId",
+              "attributeValue" : "38927",
+              "attributeOperations" : [ {
+                "operationNames" : [ "CalculateTaxRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "DVR"
+      }
+    }, {
+      "id" : "99465092999",
+      "productCode" : "H00000000745",
+      "productSKU" : "sku7680390",
+      "billingCode" : "88855464",
+      "productType" : "HARDGOOD",
+      "displayName" : "Wireless Genie Mini",
+      "systemName" : "DTV:NRCDueToday:Included Wireless Genie Mini",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 99.00,
+        "priceType" : "NRC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_03" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "lineItemIdentifier",
+            "componentOperations" : [ {
+              "operationNames" : [ "CalculateTaxRequest" ]
+            } ],
+            "componentPath" : "lineItemIdentifier",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "omsProductId",
+              "attributeValue" : "745",
+              "attributeOperations" : [ {
+                "operationNames" : [ "CalculateTaxRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "STB"
+      }
+    }, {
+      "id" : "99465093000",
+      "productCode" : "B103322",
+      "productSKU" : "sku7650501",
+      "billingCode" : "88835094",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "DIRECTV wireless receiver upgrade fee",
+      "systemName" : "DIRECTV wireless receiver upgrade fee",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 99.00,
+        "currencyType" : "USD",
+        "msrp" : 99.00,
+        "priceType" : "NRC",
+        "total" : 99.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "WirelessBrdg",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "AccDV|WirelessBrdg",
+            "componentMapRequiredIndicator" : true
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      }
+    }, {
+      "id" : "LINEITEM_08",
+      "productCode" : "NOT_AVAILABLE",
+      "billingCode" : "NOT_AVAILABLE",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "Paperless_Bill",
+      "systemName" : "PAPERLESS_BILL",
+      "price" : {
+        "amount" : 0,
+        "currencyType" : "USD",
+        "msrp" : 0,
+        "priceType" : "RC",
+        "total" : 0
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02" ]
+      }
+    } ]
+  },
+  "names" : {
+    "name" : [ {
+      "id" : "NAME_01",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    }, {
+      "id" : "NAME_02",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    }, {
+      "id" : "NAME_03",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    } ]
+  },
+  "addresses" : {
+    "address" : [ {
+      "id" : "ADDRESS_01",
+      "addressId" : "D1a7d79ed2c",
+      "unparsedAddress" : {
+        "addressLine1" : "928 W EDGEWOOD BLVD UNIT 128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911"
+      },
+      "parsedAddress" : {
+        "houseNumber" : "928",
+        "direction" : "W",
+        "streetName" : "EDGEWOOD",
+        "streetType" : "BLVD",
+        "apartmentUnit" : "APT",
+        "apartmentUnitNumber" : "128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911",
+        "rateZoneBanCode" : "551",
+        "legalEntity" : "AM00",
+        "buildingType" : "Y",
+        "tarCode" : "LNNG",
+        "rateCenterCode" : "LANSING",
+        "exchangeCode" : "LNNG",
+        "primaryNPANXX" : "517393",
+        "clli8" : "LNNGMISO",
+        "videoHubOffice" : "LNNGMI"
+      },
+      "additionalDetails" : {
+        "additionalDetail" : [ {
+          "code" : "ValidatedAddress",
+          "value" : "True"
+        } ]
+      }
+    }, {
+      "id" : "ADDRESS_02",
+      "unparsedAddress" : {
+        "addressLine1" : "928 W EDGEWOOD BLVD",
+        "addressLine2" : "UNIT 128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911"
+      }
+    } ]
+  },
+  "accounts" : {
+    "account" : [ {
+      "id" : "ACCOUNT_01",
+      "accountCategory" : "UVERSE_ACCOUNT",
+      "accountSubCategory" : "EXISTING",
+      "paymentArrangement" : "POSTPAID",
+      "billingAccountNumber" : "252266484",
+      "billingLanguagePreference" : "ENGLISH",
+      "billingDetail" : [ {
+        "nameReference" : "NAME_02",
+        "addressReference" : "ADDRESS_02",
+        "previousAddress" : "N"
+      } ],
+      "serviceLocationReference" : "ADDRESS_01",
+      "creditCheck" : {
+        "creditClass" : "HIGH",
+        "creditCheckManagementTransactionId" : "U20170821716128069",
+        "creditCheckRanIndicator" : true,
+        "electronicIdNumber" : "U20170821716128069",
+        "depositRequired" : "N",
+        "safeScanAlertIndicator" : true,
+        "singleCreditQueryWirelessIndicator" : false,
+        "safeScanPassIndicator" : false,
+        "treatmentCode" : "A001",
+        "treatmentMessage" : "No additional fee is required at this time."
+      },
+      "billingDeliveryPreference" : "PAPERLESS",
+      "accountType" : "INDIVIDUAL",
+      "accountSubType" : "R",
+      "passCode" : "unknown",
+      "market" : "551",
+      "spokenLanguagePreference" : "ENGLISH",
+      "existingAutoBillStatus" : "NoExistingAutopay"
+    } ]
+  },
+  "promotions" : {
+    "promotion" : [ {
+      "id" : "PROMOTION_01",
+      "promotionCode" : "DV0014",
+      "promotionId" : "89310366",
+      "baseOfferId" : "88849634",
+      "parentPricePlanCode" : "88849634",
+      "componentConfigurations" : [ {
+        "componentCode" : "programming",
+        "componentOperations" : [ {
+          "operationNames" : [ "QPRequest" ]
+        }, {
+          "operationNames" : [ "RQRequest" ]
+        } ],
+        "componentPath" : "programming",
+        "componentMapRequiredIndicator" : true,
+        "attributes" : [ {
+          "attributeKey" : "DWSNew.ProgrammingCoreNew.ProgrammingCoreNew.RegionalOffers.RegionalOffers.BasePackageOffersParent.BasePackageOffersOptional",
+          "attributeCode" : "optionKey",
+          "attributeValue" : "VCNF-INSTANT-REBATE-54-12MO-V1",
+          "attributeOperations" : [ {
+            "operationNames" : [ "QPRequest" ]
+          }, {
+            "operationNames" : [ "RQRequest" ]
+          } ]
+        } ]
+      } ],
+      "promotionName" : "$54 off for 12 months ",
+      "amount" : 54.00,
+      "duration" : 12,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "MONTHLY",
+      "unitOfMeasurement" : "FLATOFF"
+    }, {
+      "id" : "PROMOTION_02",
+      "promotionCode" : "DV1146",
+      "promotionId" : "89147154",
+      "baseOfferId" : "88855444",
+      "parentPricePlanCode" : "88855444",
+      "promotionName" : "Genie? HD DVR Discount",
+      "amount" : 299.00,
+      "duration" : 0,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "ONETIME",
+      "unitOfMeasurement" : "FLATOFF"
+    }, {
+      "id" : "PROMOTION_03",
+      "promotionCode" : "DV1146",
+      "promotionId" : "89147154",
+      "baseOfferId" : "88855464",
+      "parentPricePlanCode" : "88855464",
+      "promotionName" : "Wireless Genie Mini Discount",
+      "amount" : 99.00,
+      "duration" : 0,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "ONETIME",
+      "unitOfMeasurement" : "FLATOFF"
+    } ]
+  },
+  "schedulingDetails" : {
+    "schedulingDetail" : [ {
+      "id" : "SCHEDULINGINFO_01",
+      "landlordDetail" : {
+        "landlordPermission" : "N"
+      },
+      "nameReference" : "NAME_03",
+      "actualSchedule" : {
+        "selectedAppointmentDate" : "2017-08-22",
+        "selectedAppointmentTime" : "08:00:00",
+        "startTime" : "08:00 AM",
+        "endTime" : "12:00 PM",
+        "workOrderId" : "M7233009876"
+      },
+      "installType" : "TECH",
+      "realTimeCalendarIndicator" : true
+    } ]
+  },
+  "serviceFacilityQualifications" : {
+    "serviceFacilityQualification" : [ {
+      "id" : "SERVICE_QLFY_01",
+      "addressReference" : "ADDRESS_01",
+      "preferredNetworkType" : "FTTN",
+      "profileCode" : "TDD033",
+      "cpeRequiredIndicator" : false,
+      "facilityCheck" : {
+        "validations" : [ {
+          "code" : "SC4-0000",
+          "message" : "U-Verse or Non-AT&T services exist. If services are home phone & DSL, customer will need to port their Non-AT&T home phone line to AT&T then disconnect DSL with current provider. If only DSL exists, customer will need to disconnect with current provider."
+        } ],
+        "serviceType" : [ {
+          "conflictingServiceIndicator" : true,
+          "serviceType" : "U-Verse"
+        } ],
+        "acknowledgeIndicator" : false
+      }
+    } ]
+  },
+  "conflictingServiceDetails" : {
+    "conflictingServiceDetail" : [ {
+      "id" : "CONF_SRV_INFO_01",
+      "addressReference" : "ADDRESS_01",
+      "productDetails" : [ {
+        "productDescription" : "INTERNET 25X5 DYNAMIC",
+        "previousProductTransportType" : "FTTN",
+        "productCode" : "UHSI",
+        "packageCode" : "10005254"
+      } ],
+      "accountNumber" : "252266484",
+      "legacyExistIndicator" : true,
+      "btn" : {
+        "tn" : "0000000000"
+      }
+    } ]
+  },
+  "dueAmount" : {
+    "amount" : 99.00,
+    "currencyType" : "USD",
+    "total" : 99.00
+  },
+  "creditPolicy" : { },
+  "partialOrderIndicator" : false,
+  "salesCode" : "ALTAY7V",
+  "salesLocation" : "Default",
+  "agentCode" : "Z0066",
+  "agentLocation" : "Z0066",
+  "termsAndConditions" : {
+    "termsAndConditionAccepted" : [ {
+      "id" : "TC_01",
+      "agreementType" : "MOBILE_ALERT",
+      "agreementText" : "By entering a contact number, you authorize AT&T to call or text you with information about your AT&T services. To opt out of future communications, please contact AT&T at 1.800.288.2020. If this is a non-AT&T wireless number, text messaging rates and other charges may apply, depending on your plan and provider.",
+      "accepted" : "Y",
+      "timestamp" : 1503371365453
+    }, {
+      "id" : "TC_02",
+      "agreementType" : "DIRECTV",
+      "agreementText" : "\n\t\t\t\t\t\t\t&lt;p&gt;Offer for new approved residential customers only.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t&lt;br&gt;YOU AGREE TO PURCHASE AND MAINTAIN 24 CONSECUTIVE MONTHS OF ANY DIRECTV BASE PROGRAMMING PACKAGE ($29.99/MO. OR ABOVE) OR QUALIFIED INTERNATIONAL SERVICE BUNDLE. IF YOU FAIL TO MAINTAIN YOUR 24-MONTH PROGRAMMING COMMITMENT, YOU AGREE THAT AN EARLY TERMINATION FEE OF $20/MONTH FOR EACH MONTH REMAINING ON YOUR AGREEMENT APPLIES.&lt;br&gt;\nIf you cancel your order prior to installation, we will issue a full refund.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;DIRECTV programming and pricing may vary. DIRECTV PROGRAMMING AND PRICING SUBJECT TO CHANGE AT ANY TIME.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;Credit or debit card used for purchase will be kept on file and may be used for any unpaid balances and fees if your DIRECTV service is disconnected.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;Leased equipment must be returned upon disconnect. If you do not return equipment, DIRECTV may charge a fee of $45 for each standard DIRECTV Receiver, HD Receiver, and each Genie Mini, and $135 for each DVR, HD DVR, and Genie HD DVR.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;You and DIRECTV agree that both parties will resolve any dispute arising under the Equipment Lease Addendum, the DIRECTV Customer Agreement or any other addendum thereto, or regarding your DIRECTV programming service, through binding arbitration as fully set forth in the DIRECTV Customer Agreement. ARBITRATION MEANS YOU WAIVE YOUR RIGHT TO A JURY TRIAL. The referenced agreements are available at &lt;a target=\"_blank\" a=\"\"\nhref=\"https://atgpreview.directv.com/DTVAPP/content/support/agreements_policies\"&gt;DIRECTV.com/agreements&lt;/a&gt;.",
+      "accepted" : "Y",
+      "timestamp" : 1503371365453
+    } ]
+  },
+  "orderContact" : {
+    "nameReference" : "NAME_01",
+    "primaryEmailAddress" : "Rashawnmitchell92@gmail.com",
+    "preferredContactMethod" : "EMAIL",
+    "preferredTimeOfDayForContact" : "N/A"
+  },
+  "orderSource" : {
+    "clientType" : "DESKTOP",
+    "channel" : "CDE-HS",
+    "application" : "MYATTSALES",
+    "browserId" : "A004006363581",
+    "additionalDetails" : {
+      "additionalDetail" : [ {
+        "code" : "SENDER",
+        "value" : "WBFC"
+      }, {
+        "code" : "BUYFLOW",
+        "value" : "NEWCO"
+      } ]
+    }
+  },
+  "geoAreaSingleDispatchAvailableIndicator" : true,
+  "satelliteTVOnlySingleDispatchEligibleIndicator" : false,
+  "singleDispatchEligibleIndicator" : true,
+  "productCombinationCode" : "0",
+  "encryptedIndicator" : true,
+  "commonOrderIndicator" : false,
+  "additionalDetails" : {
+    "additionalDetail" : [ {
+      "code" : "UVNADType",
+      "value" : "UVRG-X"
+    }, {
+      "code" : "TestingOrderIndicator",
+      "value" : "N"
+    } ]
+  }
+}
 ```
 ### The Order Object
 
 	
 Parameter | Data Type | Required | Value Rules
 --------- | --------- | -------- | -----------				
-customerOrderNumber			| String | No	 | Customer Order Number.
-orderType					| String | No	 | Order Type
-orderStatus					| Array	 | No	 | 1 to 1 : orderStatus Record
-createdDate					| Long	 | No	 | Created Date
-submittedDate				| Long	 | No	 | Submitted Date
-updatedDate					| Long	 | No	 | Updated Date
-productGroups				| Array	 | No	 | 1 to n : Group
-lineItems					| Array	 | No	 | 1 to n : LineItem
-businessTobusinesss			| Array	 | No	 | 1 to n : B2B
-names						| Array	 | No	 | 1 to n : Name
-accounts					| Array	 | No	 | 1 to n : Account
-schedulingDetails			| Array	 | No	 | 1 to n : Scheduling Info
-orderContact				| Array	 | No	 | 1 to 1 : Order contact
-[orderSource](#orderstatus)	| Array	 | No	 | 1 to 1 : Order Source
+customerOrderNumber	  |	String	|	R	|	Unique apha numeric number sent by the External System identifying a particular transaction.
+orderType	|	String	|	R	|	This value indicates the type of the OrderEX: CREATE
+createdDate	|	Long	|	R	|	Date Order is created in buy flow, if this is not available send the submittedDate
+submittedDate	|	Long	|	No	|	Date Order is submitted in buy flow in case of Create order, in case of update order, date the order is updated, can be either in buy flow or SS
+[productGroups](#productgroups)	|	Array	|	R	|	This Group will contain the list of product groups in the Order
+[lineitems](#lineitems)	|	Array	|	R	|	This Group will contain the list of lineitems in the Order
+[Names](#names)	|	Array	|	R	|	This Group will contain the list of names in the Order
+[Addresses](#addresses)	|	Array	|	R	|	This Group will contain the list of addresses in the Order
+[accounts](#accounts)	|	Array	|	R	|	This Group will contain the list of accounts in the Order
+[promotions](#promotions)		Array		O		This Group will contain the list of promotions in the Order
+[schedulingDetails](#schedulingdetails)	|	Array	|	R	|	This Group will contain the list of schedulingdetails in the Order
+[serviceFacilityQualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
+[conflictingServiceDetails](#conflictingservicedetails)	|	Array	|	O	|	conflictingServiceDetails
+[dueamount](#dueamount)	|	Complex	|	O	|	Due amount
+partialOrderIndicator	|	boolean	|	O	|	partialOrderIndicator
+salesCode	|	String	|	O	|	salesCode details
+salesLocation	|	String	|	O	|	salesLocation
+agentCode	|	String	|	O	|	agentCode
+agentLocation	|	String	|	O	|	agentLocation
+[termsAndConditions](#termsandconditions)	|	Array	|	O	|	T&Cs Details
+[orderContact](#ordercontact)	|	Array	|	O	|	Contact details
+[orderSource](#ordersource)	|	Array	|	O	|	Source of the order
+geoAreaSingleDispatchAvailableIndicator	|	boolean	|	O	|	geoAreaSingleDispatchAvailableIndicator
+satelliteTVOnlySingleDispatchEligibleIndicator	|	boolean	|	O	|	satelliteTVOnlySingleDispatchEligibleIndicator
+singleDispatchEligibleIndicator	|	boolean	|	O	|	singleDispatchEligibleIndicator
+productCombinationCode	|	String	|	O	|	productCombinationCode
+encryptedIndicator	|	boolean	|	O	|	encryptedIndicator
+commonOrderIndicator	|	boolean	|	O	|	Indicates whether the Order details have to be sent to CSI COMS or not
+[additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional product configuration details will be populated as code value pair under this structure
+
+
 
 
 ###orderStatus
