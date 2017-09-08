@@ -1047,7 +1047,7 @@ submittedDate	|	Long	|	No	|	Date Order is submitted in buy flow in case of Creat
 [accounts](#accounts)	|	Array	|	R	|	This Group will contain the list of accounts in the Order
 [promotions](#promotions)	|	Array	|	O	|	This Group will contain the list of promotions in the Order
 [schedulingDetails](#schedulingdetails)	|	Array	|	R	|	This Group will contain the list of schedulingdetails in the Order
-[serviceFacilityQualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
+[serviceFacility Qualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
 [conflictingServiceDetails](#conflictingservicedetails)	|	Array	|	O	|	conflictingServiceDetails
 [dueamount](#dueamount)	|	Complex	|	O	|	Due amount
 partialOrderIndicator	|	boolean	|	O	|	partialOrderIndicator
@@ -1058,9 +1058,9 @@ agentLocation	|	String	|	O	|	agentLocation
 [termsAndConditions](#termsandconditions)	|	Array	|	O	|	T&Cs Details
 [orderContact](#ordercontact)	|	Array	|	O	|	Contact details
 [orderSource](#ordersource)	|	Array	|	O	|	Source of the order
-geoAreaSingleDispatchAvailableIndicator	|	boolean	|	O	|	geoAreaSingleDispatchAvailableIndicator
-satelliteTVOnlySingleDispatchEligibleIndicator	|	boolean	|	O	|	satelliteTVOnlySingleDispatchEligibleIndicator
-singleDispatchEligibleIndicator	|	boolean	|	O	|	singleDispatchEligibleIndicator
+geoArea SingleDispatch AvailableIndicator	|	boolean	|	O	|	geoAreaSingleDispatchAvailableIndicator
+satelliteTVOnly SingleDispatch EligibleIndicator	|	boolean	|	O	|	satelliteTVOnlySingleDispatchEligibleIndicator
+singleDispatch EligibleIndicator	|	boolean	|	O	|	singleDispatchEligibleIndicator
 productCombinationCode	|	String	|	O	|	productCombinationCode
 encryptedIndicator	|	boolean	|	O	|	encryptedIndicator
 commonOrderIndicator	|	boolean	|	O	|	Indicates whether the Order details have to be sent to CSI COMS or not
