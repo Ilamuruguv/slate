@@ -1032,6 +1032,889 @@ curl "api_endpoint_here"
   }
 }
 ```
+{
+  "customerOrderNumber" : "20-301100009625088",
+  "orderType" : "CREATE",
+  "createdDate" : 1503370818288,
+  "submittedDate" : 1503371365453,
+  "productGroups" : {
+    "group" : [ {
+      "id" : "GROUP_01",
+      "name" : "Package",
+      "type" : "PACKAGE",
+      "sequence" : 1,
+      "characteristics" : {
+        "packageCharacteristics" : {
+          "category" : "OFFER",
+          "code" : "422383389",
+          "type" : "NEW"
+        }
+      }
+    }, {
+      "id" : "GROUP_02",
+      "name" : "XTRA All Included",
+      "type" : "LINE_OF_SERVICE",
+      "sequence" : 2,
+      "characteristics" : {
+        "losgCharacteristics" : {
+          "losgReferenceId" : "dtv",
+          "sequence" : 1,
+          "losgType" : "NEW",
+          "productCategory" : "DIRECTV",
+          "dealerCode" : "Z0066",
+          "accountReference" : "ACCOUNT_01",
+          "serviceLocationReference" : "ADDRESS_01",
+          "serviceQualificationReference" : "SERVICE_QLFY_01",
+          "termsAndConditionReferences" : {
+            "termsAndConditionReference" : [ "TC_02" ]
+          },
+          "schedulingDetailReference" : "SCHEDULINGINFO_01",
+          "direcTVLOSCharacteristics" : {
+            "offerLanguage" : "English",
+            "dealerId" : "1782681",
+            "marketingSourceCode" : "7111",
+            "moveInOrder" : "N"
+          },
+          "fulfillmentMethod" : "DF",
+          "additionalDetails" : {
+            "additionalDetail" : [ {
+              "type" : "OMRR",
+              "code" : "parentComponentCode",
+              "value" : "ATTDVMAIN"
+            } ]
+          }
+        }
+      }
+    } ]
+  },
+  "lineItems" : {
+    "lineItem" : [ {
+      "id" : "99465092577",
+      "productCode" : "P103354",
+      "productSKU" : "sku7650336",
+      "billingCode" : "88849634",
+      "productType" : "PLAN",
+      "displayName" : "XTRA All Included",
+      "systemName" : "DTV:XTRA all included",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 70.00,
+        "currencyType" : "USD",
+        "msrp" : 124.00,
+        "priceType" : "RC",
+        "total" : 70.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_01" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "ATTDTV",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTV",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "BasePkg",
+              "attributeValue" : "XTRAAll",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "ATTDV",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "ATTDV",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTV",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "programming",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "programming",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.ProgrammingCoreNew.ProgrammingCoreNew.Languages.AIBasePackages.AllInclusive.BasePackages.BasePackages",
+              "attributeCode" : "optionKey",
+              "attributeValue" : "P103354",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      }
+    }, {
+      "id" : "99465092995",
+      "productCode" : "H00000038927",
+      "productSKU" : "sku7650361",
+      "billingCode" : "2",
+      "productType" : "HARDGOOD",
+      "displayName" : "Genie HD DVR",
+      "systemName" : "IncludedGenieHDDVR",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTVGenie",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE|DTVGenie",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "ATTDTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "DTVGenie",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "numberOfTvs",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "FVPD1Request" ]
+            } ],
+            "componentPath" : "DTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "materialCode",
+              "attributeValue" : "100003360",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "SKUCode",
+              "attributeValue" : "H00000038927",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "equipment",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "equipment",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverTotalOrderCheck.ReceiverTotalOrderCount.OnHowManyReceivers",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_TVCount@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            }, {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverLeased.ReceiverLeased.ReceiverLeased",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_H00000038927@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTVCP",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV|DTVCP",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "installationType",
+              "attributeValue" : "Tech",
+              "attributeOperations" : [ {
+                "operationNames" : [ "IWFARequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "DVR"
+      }
+    }, {
+      "id" : "99465092996",
+      "productCode" : "H00000000745",
+      "productSKU" : "sku7650365",
+      "billingCode" : "2",
+      "productType" : "HARDGOOD",
+      "displayName" : "Wireless Genie Mini",
+      "systemName" : "IncludedWirelessGenieMini",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTVWirelessGenie",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE|DTVWirelessGenie",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "ATTDTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "ATTDTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "DTVWGenieMini",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "numberOfTvs",
+              "attributeValue" : "@QUANTITY@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "MOORequest" ]
+              }, {
+                "operationNames" : [ "PUSPO1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "DTVCPE",
+            "componentOperations" : [ {
+              "operationNames" : [ "FVPD1Request" ]
+            } ],
+            "componentPath" : "DTVCPE",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "materialCode",
+              "attributeValue" : "100003357",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            }, {
+              "attributeCode" : "SKUCode",
+              "attributeValue" : "H00000000745",
+              "attributeOperations" : [ {
+                "operationNames" : [ "FVPD1Request" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "equipment",
+            "componentOperations" : [ {
+              "operationNames" : [ "QPRequest" ]
+            }, {
+              "operationNames" : [ "RQRequest" ]
+            } ],
+            "componentPath" : "equipment",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeKey" : "DWSNew.Hardware.Hardware.ReceiverTotalOrderCheck.ReceiverTotalOrderCount.OnHowManyReceivers",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_TVCount@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            }, {
+              "attributeKey" : "DWSNew.Hardware.Hardware.HomeMediaCenterClient.HomeMediaCenterClient.HomeMediaCenterClient.HomeMediaCenterClientLeased",
+              "attributeCode" : "quantity",
+              "attributeValue" : "@#_H00000000745@",
+              "attributeOperations" : [ {
+                "operationNames" : [ "QPRequest" ]
+              }, {
+                "operationNames" : [ "RQRequest" ]
+              } ]
+            } ]
+          }, {
+            "componentCode" : "DTVCP",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTV|DTVCP",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "installationType",
+              "attributeValue" : "Tech",
+              "attributeOperations" : [ {
+                "operationNames" : [ "IWFARequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "STB"
+      }
+    }, {
+      "id" : "99465092997",
+      "productCode" : "P6376",
+      "productSKU" : "sku7650429",
+      "billingCode" : "111",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "Advanced Receiver Fee ",
+      "systemName" : "DTV Included Advanced Receiver Fee",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 0.00,
+        "priceType" : "RC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : { }
+    }, {
+      "id" : "99465092998",
+      "productCode" : "H00000038927",
+      "productSKU" : "sku7680379",
+      "billingCode" : "88855444",
+      "productType" : "HARDGOOD",
+      "displayName" : "Genie HD DVR",
+      "systemName" : "DTV:NRCDueToday:Included Genie HD DVR",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 299.00,
+        "priceType" : "NRC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_02" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "lineItemIdentifier",
+            "componentOperations" : [ {
+              "operationNames" : [ "CalculateTaxRequest" ]
+            } ],
+            "componentPath" : "lineItemIdentifier",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "omsProductId",
+              "attributeValue" : "38927",
+              "attributeOperations" : [ {
+                "operationNames" : [ "CalculateTaxRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "DVR"
+      }
+    }, {
+      "id" : "99465092999",
+      "productCode" : "H00000000745",
+      "productSKU" : "sku7680390",
+      "billingCode" : "88855464",
+      "productType" : "HARDGOOD",
+      "displayName" : "Wireless Genie Mini",
+      "systemName" : "DTV:NRCDueToday:Included Wireless Genie Mini",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 0.00,
+        "currencyType" : "USD",
+        "msrp" : 99.00,
+        "priceType" : "NRC",
+        "total" : 0.00
+      },
+      "quantity" : 1,
+      "promotionReferences" : {
+        "promotionReference" : [ "PROMOTION_03" ]
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "DTSTB",
+            "componentOperations" : [ {
+              "operationNames" : [ "IWFARequest" ]
+            } ],
+            "componentPath" : "DTCP|DTSTB",
+            "componentMapRequiredIndicator" : true
+          }, {
+            "componentCode" : "lineItemIdentifier",
+            "componentOperations" : [ {
+              "operationNames" : [ "CalculateTaxRequest" ]
+            } ],
+            "componentPath" : "lineItemIdentifier",
+            "componentMapRequiredIndicator" : true,
+            "attributes" : [ {
+              "attributeCode" : "omsProductId",
+              "attributeValue" : "745",
+              "attributeOperations" : [ {
+                "operationNames" : [ "CalculateTaxRequest" ]
+              } ]
+            } ]
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      },
+      "hardGood" : {
+        "hardGoodType" : "STB"
+      }
+    }, {
+      "id" : "99465093000",
+      "productCode" : "B103322",
+      "productSKU" : "sku7650501",
+      "billingCode" : "88835094",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "DIRECTV wireless receiver upgrade fee",
+      "systemName" : "DIRECTV wireless receiver upgrade fee",
+      "action" : "ADD",
+      "price" : {
+        "amount" : 99.00,
+        "currencyType" : "USD",
+        "msrp" : 99.00,
+        "priceType" : "NRC",
+        "total" : 99.00
+      },
+      "quantity" : 1,
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02", "GROUP_01" ]
+      },
+      "characteristics" : {
+        "commonCharacteristics" : {
+          "componentConfigurations" : [ {
+            "componentCode" : "WirelessBrdg",
+            "componentOperations" : [ {
+              "operationNames" : [ "MOORequest" ]
+            }, {
+              "operationNames" : [ "PUSPO1Request" ]
+            } ],
+            "componentPath" : "AccDV|WirelessBrdg",
+            "componentMapRequiredIndicator" : true
+          } ],
+          "ignorePricePlanCode" : "N"
+        }
+      }
+    }, {
+      "id" : "LINEITEM_08",
+      "productCode" : "NOT_AVAILABLE",
+      "billingCode" : "NOT_AVAILABLE",
+      "productType" : "OPTIONAL_FEATURE",
+      "displayName" : "Paperless_Bill",
+      "systemName" : "PAPERLESS_BILL",
+      "price" : {
+        "amount" : 0,
+        "currencyType" : "USD",
+        "msrp" : 0,
+        "priceType" : "RC",
+        "total" : 0
+      },
+      "groupReferences" : {
+        "groupReference" : [ "GROUP_02" ]
+      }
+    } ]
+  },
+  "names" : {
+    "name" : [ {
+      "id" : "NAME_01",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    }, {
+      "id" : "NAME_02",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    }, {
+      "id" : "NAME_03",
+      "firstName" : "Rashawn",
+      "lastName" : "Mitchell",
+      "primaryContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "CELL_PHONE"
+      } ],
+      "additionalContactPhones" : [ {
+        "phoneNumber" : "5174023095",
+        "contactPhoneType" : "OTHER"
+      } ]
+    } ]
+  },
+  "addresses" : {
+    "address" : [ {
+      "id" : "ADDRESS_01",
+      "addressId" : "D1a7d79ed2c",
+      "unparsedAddress" : {
+        "addressLine1" : "928 W EDGEWOOD BLVD UNIT 128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911"
+      },
+      "parsedAddress" : {
+        "houseNumber" : "928",
+        "direction" : "W",
+        "streetName" : "EDGEWOOD",
+        "streetType" : "BLVD",
+        "apartmentUnit" : "APT",
+        "apartmentUnitNumber" : "128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911",
+        "rateZoneBanCode" : "551",
+        "legalEntity" : "AM00",
+        "buildingType" : "Y",
+        "tarCode" : "LNNG",
+        "rateCenterCode" : "LANSING",
+        "exchangeCode" : "LNNG",
+        "primaryNPANXX" : "517393",
+        "clli8" : "LNNGMISO",
+        "videoHubOffice" : "LNNGMI"
+      },
+      "additionalDetails" : {
+        "additionalDetail" : [ {
+          "code" : "ValidatedAddress",
+          "value" : "True"
+        } ]
+      }
+    }, {
+      "id" : "ADDRESS_02",
+      "unparsedAddress" : {
+        "addressLine1" : "928 W EDGEWOOD BLVD",
+        "addressLine2" : "UNIT 128",
+        "city" : "LANSING",
+        "state" : "MI",
+        "zip" : "48911"
+      }
+    } ]
+  },
+  "accounts" : {
+    "account" : [ {
+      "id" : "ACCOUNT_01",
+      "accountCategory" : "UVERSE_ACCOUNT",
+      "accountSubCategory" : "EXISTING",
+      "paymentArrangement" : "POSTPAID",
+      "billingAccountNumber" : "252266484",
+      "billingLanguagePreference" : "ENGLISH",
+      "billingDetail" : [ {
+        "nameReference" : "NAME_02",
+        "addressReference" : "ADDRESS_02",
+        "previousAddress" : "N"
+      } ],
+      "serviceLocationReference" : "ADDRESS_01",
+      "creditCheck" : {
+        "creditClass" : "HIGH",
+        "creditCheckManagementTransactionId" : "U20170821716128069",
+        "creditCheckRanIndicator" : true,
+        "electronicIdNumber" : "U20170821716128069",
+        "depositRequired" : "N",
+        "safeScanAlertIndicator" : true,
+        "singleCreditQueryWirelessIndicator" : false,
+        "safeScanPassIndicator" : false,
+        "treatmentCode" : "A001",
+        "treatmentMessage" : "No additional fee is required at this time."
+      },
+      "billingDeliveryPreference" : "PAPERLESS",
+      "accountType" : "INDIVIDUAL",
+      "accountSubType" : "R",
+      "passCode" : "unknown",
+      "market" : "551",
+      "spokenLanguagePreference" : "ENGLISH",
+      "existingAutoBillStatus" : "NoExistingAutopay"
+    } ]
+  },
+  "promotions" : {
+    "promotion" : [ {
+      "id" : "PROMOTION_01",
+      "promotionCode" : "DV0014",
+      "promotionId" : "89310366",
+      "baseOfferId" : "88849634",
+      "parentPricePlanCode" : "88849634",
+      "componentConfigurations" : [ {
+        "componentCode" : "programming",
+        "componentOperations" : [ {
+          "operationNames" : [ "QPRequest" ]
+        }, {
+          "operationNames" : [ "RQRequest" ]
+        } ],
+        "componentPath" : "programming",
+        "componentMapRequiredIndicator" : true,
+        "attributes" : [ {
+          "attributeKey" : "DWSNew.ProgrammingCoreNew.ProgrammingCoreNew.RegionalOffers.RegionalOffers.BasePackageOffersParent.BasePackageOffersOptional",
+          "attributeCode" : "optionKey",
+          "attributeValue" : "VCNF-INSTANT-REBATE-54-12MO-V1",
+          "attributeOperations" : [ {
+            "operationNames" : [ "QPRequest" ]
+          }, {
+            "operationNames" : [ "RQRequest" ]
+          } ]
+        } ]
+      } ],
+      "promotionName" : "$54 off for 12 months ",
+      "amount" : 54.00,
+      "duration" : 12,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "MONTHLY",
+      "unitOfMeasurement" : "FLATOFF"
+    }, {
+      "id" : "PROMOTION_02",
+      "promotionCode" : "DV1146",
+      "promotionId" : "89147154",
+      "baseOfferId" : "88855444",
+      "parentPricePlanCode" : "88855444",
+      "promotionName" : "Genie? HD DVR Discount",
+      "amount" : 299.00,
+      "duration" : 0,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "ONETIME",
+      "unitOfMeasurement" : "FLATOFF"
+    }, {
+      "id" : "PROMOTION_03",
+      "promotionCode" : "DV1146",
+      "promotionId" : "89147154",
+      "baseOfferId" : "88855464",
+      "parentPricePlanCode" : "88855464",
+      "promotionName" : "Wireless Genie Mini Discount",
+      "amount" : 99.00,
+      "duration" : 0,
+      "promotionType" : "PROMOTION",
+      "promotionCycle" : "ONETIME",
+      "unitOfMeasurement" : "FLATOFF"
+    } ]
+  },
+  "schedulingDetails" : {
+    "schedulingDetail" : [ {
+      "id" : "SCHEDULINGINFO_01",
+      "landlordDetail" : {
+        "landlordPermission" : "N"
+      },
+      "nameReference" : "NAME_03",
+      "actualSchedule" : {
+        "selectedAppointmentDate" : "2017-08-22",
+        "selectedAppointmentTime" : "08:00:00",
+        "startTime" : "08:00 AM",
+        "endTime" : "12:00 PM",
+        "workOrderId" : "M7233009876"
+      },
+      "installType" : "TECH",
+      "realTimeCalendarIndicator" : true
+    } ]
+  },
+  "serviceFacilityQualifications" : {
+    "serviceFacilityQualification" : [ {
+      "id" : "SERVICE_QLFY_01",
+      "addressReference" : "ADDRESS_01",
+      "preferredNetworkType" : "FTTN",
+      "profileCode" : "TDD033",
+      "cpeRequiredIndicator" : false,
+      "facilityCheck" : {
+        "validations" : [ {
+          "code" : "SC4-0000",
+          "message" : "U-Verse or Non-AT&T services exist. If services are home phone & DSL, customer will need to port their Non-AT&T home phone line to AT&T then disconnect DSL with current provider. If only DSL exists, customer will need to disconnect with current provider."
+        } ],
+        "serviceType" : [ {
+          "conflictingServiceIndicator" : true,
+          "serviceType" : "U-Verse"
+        } ],
+        "acknowledgeIndicator" : false
+      }
+    } ]
+  },
+  "conflictingServiceDetails" : {
+    "conflictingServiceDetail" : [ {
+      "id" : "CONF_SRV_INFO_01",
+      "addressReference" : "ADDRESS_01",
+      "productDetails" : [ {
+        "productDescription" : "INTERNET 25X5 DYNAMIC",
+        "previousProductTransportType" : "FTTN",
+        "productCode" : "UHSI",
+        "packageCode" : "10005254"
+      } ],
+      "accountNumber" : "252266484",
+      "legacyExistIndicator" : true,
+      "btn" : {
+        "tn" : "0000000000"
+      }
+    } ]
+  },
+  "dueAmount" : {
+    "amount" : 99.00,
+    "currencyType" : "USD",
+    "total" : 99.00
+  },
+  "creditPolicy" : { },
+  "partialOrderIndicator" : false,
+  "salesCode" : "ALTAY7V",
+  "salesLocation" : "Default",
+  "agentCode" : "Z0066",
+  "agentLocation" : "Z0066",
+  "termsAndConditions" : {
+    "termsAndConditionAccepted" : [ {
+      "id" : "TC_01",
+      "agreementType" : "MOBILE_ALERT",
+      "agreementText" : "By entering a contact number, you authorize AT&T to call or text you with information about your AT&T services. To opt out of future communications, please contact AT&T at 1.800.288.2020. If this is a non-AT&T wireless number, text messaging rates and other charges may apply, depending on your plan and provider.",
+      "accepted" : "Y",
+      "timestamp" : 1503371365453
+    }, {
+      "id" : "TC_02",
+      "agreementType" : "DIRECTV",
+      "agreementText" : "\n\t\t\t\t\t\t\t&lt;p&gt;Offer for new approved residential customers only.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t&lt;br&gt;YOU AGREE TO PURCHASE AND MAINTAIN 24 CONSECUTIVE MONTHS OF ANY DIRECTV BASE PROGRAMMING PACKAGE ($29.99/MO. OR ABOVE) OR QUALIFIED INTERNATIONAL SERVICE BUNDLE. IF YOU FAIL TO MAINTAIN YOUR 24-MONTH PROGRAMMING COMMITMENT, YOU AGREE THAT AN EARLY TERMINATION FEE OF $20/MONTH FOR EACH MONTH REMAINING ON YOUR AGREEMENT APPLIES.&lt;br&gt;\nIf you cancel your order prior to installation, we will issue a full refund.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;DIRECTV programming and pricing may vary. DIRECTV PROGRAMMING AND PRICING SUBJECT TO CHANGE AT ANY TIME.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;Credit or debit card used for purchase will be kept on file and may be used for any unpaid balances and fees if your DIRECTV service is disconnected.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;Leased equipment must be returned upon disconnect. If you do not return equipment, DIRECTV may charge a fee of $45 for each standard DIRECTV Receiver, HD Receiver, and each Genie Mini, and $135 for each DVR, HD DVR, and Genie HD DVR.&lt;br&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;br&gt;You and DIRECTV agree that both parties will resolve any dispute arising under the Equipment Lease Addendum, the DIRECTV Customer Agreement or any other addendum thereto, or regarding your DIRECTV programming service, through binding arbitration as fully set forth in the DIRECTV Customer Agreement. ARBITRATION MEANS YOU WAIVE YOUR RIGHT TO A JURY TRIAL. The referenced agreements are available at &lt;a target=\"_blank\" a=\"\"\nhref=\"https://atgpreview.directv.com/DTVAPP/content/support/agreements_policies\"&gt;DIRECTV.com/agreements&lt;/a&gt;.",
+      "accepted" : "Y",
+      "timestamp" : 1503371365453
+    } ]
+  },
+  "orderContact" : {
+    "nameReference" : "NAME_01",
+    "primaryEmailAddress" : "Rashawnmitchell92@gmail.com",
+    "preferredContactMethod" : "EMAIL",
+    "preferredTimeOfDayForContact" : "N/A"
+  },
+  "orderSource" : {
+    "clientType" : "DESKTOP",
+    "channel" : "CDE-HS",
+    "application" : "MYATTSALES",
+    "browserId" : "A004006363581",
+    "additionalDetails" : {
+      "additionalDetail" : [ {
+        "code" : "SENDER",
+        "value" : "WBFC"
+      }, {
+        "code" : "BUYFLOW",
+        "value" : "NEWCO"
+      } ]
+    }
+  },
+  "geoAreaSingleDispatchAvailableIndicator" : true,
+  "satelliteTVOnlySingleDispatchEligibleIndicator" : false,
+  "singleDispatchEligibleIndicator" : true,
+  "productCombinationCode" : "0",
+  "encryptedIndicator" : true,
+  "commonOrderIndicator" : false,
+  "additionalDetails" : {
+    "additionalDetail" : [ {
+      "code" : "UVNADType",
+      "value" : "UVRG-X"
+    }, {
+      "code" : "TestingOrderIndicator",
+      "value" : "N"
+    } ]
+  }
+}
+
+
 
 ### order
 
@@ -1044,14 +1927,14 @@ createdDate	|	Long	|	R	|	Date Order is created in buy flow, if this is not avail
 submittedDate	|	Long	|	No	|	Date Order is submitted in buy flow in case of Create order, in case of update order, date the order is updated, can be either in buy flow or SS
 [productGroups](#productgroups)	|	Array	|	R	|	This Group will contain the list of product groups in the Order
 [lineitems](#lineitems)	|	Array	|	R	|	This Group will contain the list of lineitems in the Order
-[Names](#names)	|	Array	|	R	|	This Group will contain the list of names in the Order
-[Addresses](#addresses)	|	Array	|	R	|	This Group will contain the list of addresses in the Order
+[names](#names)	|	Array	|	R	|	This Group will contain the list of names in the Order
+[addresses](#addresses)	|	Array	|	R	|	This Group will contain the list of addresses in the Order
 [accounts](#accounts)	|	Array	|	R	|	This Group will contain the list of accounts in the Order
 [promotions](#promotions)	|	Array	|	O	|	This Group will contain the list of promotions in the Order
 [schedulingDetails](#schedulingdetails)	|	Array	|	R	|	This Group will contain the list of schedulingdetails in the Order
-[serviceFacility Qualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
+[serviceFacilityQualifications](#servicefacilityqualifications)	|	Array	|	O	|	serviceFacilityQualifications rules
 [conflictingServiceDetails](#conflictingservicedetails)	|	Array	|	O	|	conflictingServiceDetails
-[dueamount](#dueamount)	|	Complex	|	O	|	Due amount
+[dueAmount](#dueamount)	|	Complex	|	O	|	Due amount
 partialOrderIndicator	|	boolean	|	O	|	partialOrderIndicator
 salesCode	|	String	|	O	|	salesCode details
 salesLocation	|	String	|	O	|	salesLocation
@@ -1067,20 +1950,6 @@ productCombinationCode	|	String	|	O	|	productCombinationCode
 encryptedIndicator	|	boolean	|	O	|	encryptedIndicator
 commonOrderIndicator	|	boolean	|	O	|	Indicates whether the Order details have to be sent to CSI COMS or not
 [additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional product configuration details will be populated as code value pair under this structure
-	
-
-
-
-###orderStatus
-
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-status				Status	| String	| No 	| Status
-subStatus			Status	| String	| No	| Sub Status
-operation			Status	| String	| No	| Operation
-falloutCode			Status	| String 	| No	| Fall Out Code
-falloutDescription	Status	| String	| No	| Fall out Description
 
 
 ### productGroups
@@ -1089,63 +1958,1247 @@ Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 [group](#group)    |	Array |	No	| 1 to n : Group Record
 
-
-
 ### group
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-id	|	ID	|	R	|	Unique identifier to identify a particular Product Group 
+id	| String |	R	|	Unique identifier to identify a particular Product Group 
 name	|	String	|	O	|	Unique name to identify a partial Product Group 
 type	|	String	|	O	|	This value identifies if the group is a line of service 
 sequence	|	integer	|	O	|	This value starts with 1 and indicates the sequencing of the line of services in the Order transaction 
-price	|	Complex type	|	O	|	This price info structure is used to identify subtotal i.e., amount and total price for an LOSG. 
-promotionRefs	|		|	O	|	Indicates a promotion ref after all promotions applied. Eg: for a combined bill promotion 
-Groups Chars	|		|	O	|	Characteristics for Group type - line of service group (LOSG) 
-SharedPlan Chars	|		|	O	|	Characteristics for Group type- SHARED_PLAN 
-Package Chars	|		|	O	|	Applicable if OMS Product/Package Code is available 
-LOSG Chars	|		|	O	|	Characteristics for a particular line of service group (LOSG) 
-LoSGReferenceId	|	String	|	O	|	Unique value across system. This value uniquely identifies the line of service group ID 
-LOSGSequenceNumber	|	Integer	|	O	|	This is Unique for an order and the value has to be only numeric ( Max 4 digits) for Common Order or if IsCommonOrder Flag is true 
+[price](#price)	|	Array	|	O	|	This price info structure is used to identify subtotal i.e., amount and total price for an LOSG. 
+[promotionReferences](#promotionreferences)	| Array	|	O	|	Indicates a promotion ref after all promotions applied. Eg: for a combined bill promotion 
+[characteristics](#characteristics)	| Array |	O	|	Characteristics for Group type - line of service group (LOSG) 
+[additionalDetails](#additionaldetails)	|	Array	|	O	|	
 
+### price
 
-### LoSGType 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-enum	|	String	|	R	|	This field indicates the type of the line of service group. The applicable values are
+amount | number | O | 
+baseAmount | number | O | 
+currencyType | String | O | 
+installmentEligibility
+msrp | number | O | 
+priceType | String | O | 
+[taxDetail](#taxdetail) | Array | O | 
+total | number | O | 
+
+### promotionReferences
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[promotionReference](#promotionreference) | Array | R | 
+
+### characteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[packageCharacteristics](#packagecharacteristics) | Array | O | 
+[sharedPlanCharacteristics](#sharedplancharacteristics) | Array | O | 
+[losgCharacteristics](#losgcharacteristics) | Array | O | 
+
+### packageCharacteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+category | String | O | 
+code | String | O | 
+description | String | O | 
+type | String | O | 
+
+### losgCharacteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+losgReferenceId | String | O | 
+sequence | integer | O | 
+losgType | String | R | 
+actionType | String | O | 
+actionReason | String | O | 
+productCategory | String | R | 
+primaryIndicator | boolean | O | 
+dealerCode | String | O | 
+market | String | O | 
+subMarket | String | O | 
+preferredAreaCode | String | O | 
+serviceArea | String | O | 
+serviceAreaName | String | O | 
+priceCode | String | O | 
+accountReference | String | O | 
+requestedExecutionDate | String | O | 
+effectiveDate | String | O | 
+[losgStatus](#losgstatus) | Array | O | 
+serviceLocationReference | String | O | 
+subscriberNameReference | String | O | 
+serviceQualificationReference | String | O | 
+[conflictingServiceDetailReferences](#conflictingservicedetailreferences) | Array | O | 
+[termsAndConditionReferences](#termsandconditionreferences) | Array | O |
+profileCode | String | O | 
+schedulingDetailReference | String | O | 
+[installationInstructions](#installationinstructions) | Array | O | 
+[numberPortDetail](#numberportdetail) | Array | O |
+installType | String | O | 
+notes | String | O | 
+[termsAndConditionAccepted](#termsandconditionaccepted) | Array | O | 
+[voipLOSCharacteristics](#voiploscharacteristics) | Array | O | 
+[direcTVLOSCharacteristics](#directvloscharacteristics) | Array | O | 
+[iptvLOSCharacteristics](#iptvloscharacteristics) | Array | O | 
+[internetLOSCharacteristics](#internetloscharacteristics) | Array | O | 
+[wirelessLOSCharacteristics](#wirelessloscharacteristics) | Array | O | 
+[addpLOSCharacteristics](#addploscharacteristics) | Array | O | 
+[commonLOSCharacteristics](#commonloscharacteristics) | Array | O | 
+[compensation](#compensation) | Array | O |
+fulfillmentMethod | String | O | 
+shippingDetailReference | String | O | 
+[userDefinedLabels](#userdefinedlabels) | Array | O | 
+commercePartnerCode | String | O | 
+[additionalDetails](#additionaldetails) | Array | O | 
+
+
+### commonLOSCharacteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+dwellingType | String | O | 
+
+### internetLOSCharacteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+internetProtocolDigitalSubscriberLineAccess | String | O | 
+primaryNetworkType | String | O | 
+internetProgramType | String | O | 
+gatewayCTN | String | O | 
+gatewayCTNStatus | String | O | 
+[additionalDetails](#additionaldetails) | Array | O | 
+
+
+### direcTVLOSCharacteristics
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+serviceAgreement | String | O | 
+offerLanguage | String | O | 
+dealerId | String | O | 
+marketingSourceCode | String | O | 
+moveInOrder | String | O | 
+hasMoreThanThreeFloors | boolean | O | 
+
+
+### lineItems
+
+Parameter  |  Data Type  |  Required  |  Value Rules
+  -------------  |   -------------  |   -------------  |   -------------
+[lineItem] (#lineitem) |  array  |  O  |  
+
+
+
+### lineItem
+
+Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+id  |  string  |  O  |  
+sequence  |  integer  |  O  |  
+productCode  |  string  |  O  |  
+productSKU  |  string  |  O  |  
+productSubType  |  string  |  O  |  
+billingCode  |  string  |  O  |  
+socForPreviousDevice  |  string  |  O  |  
+productType  |  string  |  O  |  
+displayName  |  string  |  O  |  
+systemName  |  string  |  O  |  
+description  |  string  |  O  |  
+action  |  string  |  O  |  
+operation  |  string  |  O  |  
+[price] (#price) |  array  |  O  |  
+locationId  |  string  |  O  |  
+[payments] (#payments)  |  array  |  O  |  
+effectiveDate  |  long  |  O  |  
+[contractDetails] (#contractdetails)  |  array  |  O  |  
+quantity  |  number  |  O  |  
+notes  |  string  |  O  |  
+status  |  string  |  O  |  
+[promotionReferences] (#promotionreferences)  |  array  |  O  |  
+[groupReferences] (#groupreferences)  |  array  |  O  |  
+[characteristics] (#characteristics)  |  array  |  O  |  
+[hardGood] (#hardgood)  |  array  |  O  |  
+[supplyChainDetail] (#supplychaindetail) |  array  |  O  |  
+subscriptionId  |  string  |  O  |  
+[additionalDetails] (#additionaldetails)  |  array  |  O  |  
+
+
+
+### price
+
+Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+amount  |  number  |  O  |  
+baseAmount  |  number  |  O  |  
+currencyType  |  string  |  O  |  
+installmentEligibility  |  string  |  O  |  
+msrp  |  number  |  O  |  
+priceType  |  string  |  O  |  
+[taxDetail] (#taxdetail)  |  array  |  O  |  
+total  |  number  |  O  |  
+
+
+
+### taxDetail
+ 
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+amount | number | O | 
+[preCalculatedTax] (#precalculatedtax) | array | O | 
+[lineItemTaxes] (#lineitemtaxes) | array | O | 
+
+
+### preCalculatedTax
+
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+taxableCost  |  number  |  O  |  
+taxableMSRP  |  number  |  O  |  
+taxableUnitPrice  |  number  |  O  |  
+orderTaxAreaId  |  number  |  O  |  
+shipFromTaxAreaId  |  number  |  O  |  
+shipToTaxAreaId  |  number  |  O  |  
+exemptionId  |  number  |  O  |  
+
+
+### lineItemTaxes
+
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+taxLineId  |  number  |  O  |  
+taxCode  |  number  |  O  |  
+memo  |  string  |  O  |  
+printName  |  string  |  O  |  
+taxable  |  string  |  O  |  
+skuSpecific  |  string  |  O  |  
+jurisdictionLevel  |  string  |  O  |  
+jurisdictionName  |  string  |  O  |  
+taxAmount  |  string  |  O  |  
+taxRate  |  number  |  O  |  
+taxDate  |  number  |  O  |  
+[taxAuthoritiesList] (#taxauthoritieslist)  |  array  |  O  |  
+
 
  
-### ActionType 
+ ### taxAuthoritiesList
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [taxAuthorities] (#taxauthorities)  |  array  |  R  |  
+
+ 
+ 
+ ### taxAuthorities
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+taxAuthorityCode  |  string  |  R  |  
+taxAuthorityValue  |  string  |  R  |  
+
+
+
+ ### payments
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [payment] (#payment) | array | O | 
+
+ 
+ 
+ ### payment
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+amount | number | O | 
+currencyType | string | O | 
+numberOfInstallment | number | O | 
+paymentOptionReference | string | O | 
+
+
+ 
+  ### contractDetails
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+installmentPlanId | number | O | 
+contractDisplayName | string | O | 
+installmentPlanDefinition | string | O | 
+annualPercentageRate | number | O | 
+financeCharge | number | O | 
+amountFinanced | number | O | 
+balancedAmount | number | O | 
+totalSalePrice | number | O | 
+downPayment | number | O | 
+downPaymentPercent | number | O | 
+prepaidFinanceCharge | number | O | 
+installmentAmount | number | O | 
+installmentStatus | string | O | 
+installmentType | string | O | 
+contractType | string | O | 
+contractSystem | string | O | 
+contractSent | string | O | 
+contractLength | number | O | 
+equipmentInstallmentPlanIndicator | boolean | O | 
+
+ 
+ 
+ ### promotionReferences
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [promotionReference] (#promotionreference) | array | R | 
+
+ 
+ 
+ ### groupReferences
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [groupReference] (#groupreference) | array | R | 
+
+ 
+ 
+ ### characteristics
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+[commonCharacteristics] (#commoncharacteristics)  |  array  |  O  |  
+[voipLineItemCharacteristics] (#voiplineitemcharacteristics)  |  array  |  O  |  
+[direcTVLineItemCharacteristics] (#direcTVlineItemcharacteristics)  |  array  |  O  |  
+[iptvLineItemCharacteristics] (#iptvlineitemcharacteristics)  |  array  |  O  |  
+[internetLineItemCharacteristics] (#internetlineitemcharacteristics)  |  array  |  O  |  
+[addOnSolutionCharacterstics] (#addonsolutioncharacterstics)  |  array  |  O  |  
+[wirelessLineItemCharacteristics] (#wirelesslineitemcharacteristics)  |  array  |  O  |  
+
+ 
+ 
+ ### commonCharacteristics
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+[componentConfigurations] (#componentconfigurations)  |  array  |  O  |  
+requestComponentGroup  |  string  |  O  |  
+ignorePricePlanCode  |  string  |  O  |  
+productSpecificationId  |  string  |  O  |  
+[fees] (#fees)  |  array  |  O  |  
+ 
+ 
+ 
+ ###  componentConfigurations
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+componentCode  |  string  |  O  |  
+[componentOperations] (#componentoperations)  |  array  |  O  |  
+componentPath  |  string  |  O  |  
+componentMapRequiredIndicator  |  boolean  |  O  |  
+[attributes] (#attributes)  |  array  |  O  |  
+
+ 
+ 
+ ### componentOperations
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [operationNames] (#operationnames)  |  array  |  R  |  
+
+
+ 
+ ### attributes
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+attributeKey  |  string  |  O  |  
+attributeCode  |  string  |  O  |  
+attributeValue  |  string  |  O  |  
+[attributeOperations] (#attributeoperations)  |  array  |  O  |  
+
+ 
+ 
+ ### attributeOperations
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+  [operationNames] (#operationnames)  |  array  |  R  |
+  
+  
+  
+ ### fees
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+feeId  |  string  |  O  |  
+feeIdType  |  string  |  O  |  
+waivedIndicator  |  boolean  |  O  |  
+waivedReason  |  string  |  O  |  
+
+ 
+ 
+ ### voipLineItemCharacteristics
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+callerId  |  string  |  O  |  
+uverseMessaging  |  string  |  R  | 
+
+ 
+ 
+ ###  internetLineItemCharacteristics
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+bucketAllowance  |  string  |  O  |  
+overageBucketAllowance  |  string  |  O  |  
+pricePerBucketAllowance  |  number  |  O  |  
+maxOverageCharge  |  number  |  O  |  
+planDownloadSpeed  |  string  |  O  |  
+boltOnType  |  string  |  O  |  
+ipType  |  string  |  O  |  
+
+ 
+ 
+ ### addOnSolutionCharacterstics
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+domainRegistration  |  string  |  O  |  
+domainName  |  string  |  O  |  
+registrationType  |  string  |  O  |  
+parentItem  |  string  |  O  |  
+
+ 
+ 
+ ### wirelessLineItemCharacteristics
+
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+partnerCode  |  string  |  O  |  
+distributionChannelId  |  string  |  O  |  
+newSalesChannelId  |  string  |  O  |  
+[tradeInDetail] (#tradeindetail)  |  array  |  O  |  
+nciEligibleIndicator  |  boolean  |  O  |  
+offerType  |  string  |  O  |  
+availabilityType  |  string  |  O  |  
+[packetDataProtocol] (#packetdataprotocol)  |  array  |  O  |  
+[attDynamicTrafficManager] (#attdynamictrafficmanager)  |  array  |  O  |  
+omniReferenceNumber  |  string  |  O  |  
+omniRequestStatus  |  string  |  O  |  
+
+ 
+ 
+ ### tradeInDetail
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+claimId  |  string  |    |  
+exchangeType  |  string  |    |  
+installmentPlanId  |  string  |    |  
+deviceClearingAgreement  |  string  |    |  
+nonComplianceFee  |  number  |    |  
+payupAmount  |  number  |    |  
+
+ 
+ 
+### packetDataProtocol
+
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+packetDataProtocolType  |  string  |  O  |  
+ipAddress  |  string  |  O  |  
+ipv6Address  |  string  |  O  |  
+ipversionType  |  string  |  O  |  
+ltePacketDataProtocolIndicator  |  boolean  |  O  |  
+defaultPacketDataProtocolIndicator  |  boolean  |  O  |  
+onlineChargingSystemIndicator  |  boolean  |  O  |  
+apnName  |  string  |  O  |  
+[additionalDetails] (#additionaldetails)  |  array  |  O  |  
+
+  
+ 
+### additionalDetails
+
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [additionalDetail] (#additionaldetail)  |  array  |  R  |  
+
+ 
+  
+  ### additionalDetail
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+type  |  string  |  O  |  
+parentType  |  string  |  O  |  
+code  |  string  |  R  |  
+value  |  string  |  R  |  
+
+ 
+ 
+  attDynamicTrafficManager
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+manifestURL  |  string  |  O  |  
+enterpriseId  |  string  |  O  |  
+manifestLabel  |  string  |  O  |  
+[additionalDetails] (#additionaldetails)  |  array  |  O  |  
+
+
+
+### additionalDetails
+
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [additionalDetail] (#additionaldetail)  |  array  |  R  |  
+ 
+ 
+ 
+ ### additionalDetail
+ 
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+type  |  string  |  O  |  
+parentType  |  string  |  O  |  
+code  |  string  |  R  |  
+value  |  string  |  R  |  
+ 
+ 
+ 
+### hardGood
+
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+byodIndicator  |  boolean  |  O  |  
+hardGoodType  |  string  |  O  |  
+productImageUrl  |  string  |  O  |  
+make  |  string  |  O  |  
+model  |  string  |  O  |  
+manufacturerCode  |  string  |  O  |  
+serialNumber  |  string  |  O  |  
+fieldId  |  string  |  O  |  
+deliveryPromiseNoteEnglish  |  string  |  O  |  
+deliveryPromiseNoteSpanish  |  string  |  O  |  
+preOrderIndicator  |  boolean  |  O  |  
+availabilityDate  |  long  |  O  |  
+shippedHotIndicator  |  boolean  |  O  |  
+[shipmentCommitDate] (#shipmentcommitdate)  |  array  |  O  |  
+[deliveryByDate] (#deliverybydate)  |  array  |  O  |  
+networkAccessDeviceType  |  string  |  O  |  
+cardSerialNumber  |  string  |  O  |  
+eid  |  string  |  O  |  
+iccId  |  string  |  O  |  
+whiteGloveDeliveryPartner  |  string  |  O  |  
+[wirelessHardGoodCharacteristics] (#wirelesshardgoodcharacteristics)  |  array  |  O  |  
+
+
+
+ ### shipmentCommitDate
+ 
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+fromDate  |  long  |  O  |  
+toDate  |  long  |  O  |  
+
+
+ 
+ ### deliveryByDate
+ 
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+fromDate  |  long  |  O  |  
+toDate  |  long  |  O  |  
+
+
+
+ ### wirelessHardGoodCharacteristics
+ 
+   Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+techType  |  string  |  O  |  
+equipmentType  |  string  |  O  |  
+imei  |  string  |  O  |  
+imeiType  |  string  |  O  |  
+internationalMobileSubscriberIdentity  |  string  |  O  |  
+usoc  |  string  |  O  |  
+connectionType  |  string  |  O  |  
+zodiacSequenceNumber  |  string  |  O  |  
+equipmentUpgrade  |  string  |  O  |  
+phoneType  |  string  |  O  |  
+deviceCategory  |  string  |  O  |  
+
+ 
+ 
+ ### supplyChainDetail
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+availabilityDate  |  string  |  O  |  
+[orderDocumentDetail] (#orderdocumentdetail)  |  array  |  O  |  
+quantityOrdered  |  number  |  O  |  
+quantityBackOrdered  |  number  |  O  |  
+quantityCanceled  |  number  |  O  |  
+quantityShipped  |  number  |  O  |  
+quantityToShip  |  number  |  O  |  
+price  |  number  |  O  |  
+exchangeOrderId  |  string  |  O  |  
+exchangeDocumentId  |  string  |  O  |  
+trackingNumber  |  string  |  O  |  
+carrier  |  string  |  O  |  
+shippedDate  |  long  |  O  |  
+claimRMANumber  |  string  |  O  |  
+
+ 
+ 
+ ### orderDocumentDetail
+ 
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+location  |  string  |  O  |  
+activity  |  string  |  O  |  
+orderId  |  string  |  O  |  
+
+ 
+ 
+ ### additionalDetails
+
+  Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+ [additionalDetail] (#additionaldetail)  |  array  |  R  |  
+ 
+ 
+ 
+ ### additionalDetail
+ 
+ Parameter  |  Data Type  |  Required  |  Value Rules
+ -------------  |   -------------  |   -------------  |   -------------
+type  |  string  |  O  |  
+parentType  |  string  |  O  |  
+code  |  string  |  R  |  
+value  |  string  |  R  |  
+
+
+
+
+### names
+
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-enum	|	String	|	O	|	ActionType indicates the type of service request. Action Type is required for all service Care Request (SCR).  
-ActionReason	|	String	|	O	|	Action Reason will have the reason for the service request. 
-ProductCategory	|	String	|	R	|	This field indicates the product category of the Line of Service group. 
-DealerCode	|	String	|	O	|	Compensation Code, also known as Dealer Code or Commission Code. Used to compute gross ads and to track orange orders in backend systems. Client systems should pass Z0066 
-Market	|	String	|	O	|	Indicates the geographical location where the sale happened. Market is required for downstream billing systems. 
-SubMarket	|	String	|	O	|	Indicates the geographical location where the sale happened. Sub Market is required for downstream billing systems. 
-PreferredAreaCode	|	String	|	O	|	Used for customer if they like to have any area code 
-ServiceArea	|	String	|	O	|	Indicates the area for the service provided 
-ServiceAreaName	|	String	|	O	|	Indicates the name of the area for the service provided 
-AccountRef	|	String	|	O	|	Indicates the account level information reference 
-RequestedExecutionDate	|	date	|	O	|	Future Requested Activation Date 
-EffectiveDate	|	date	|	O	|	Plan/Feature Effective Date 
-LoSGStatus	|	String	|	O	|	Indicates the status of line of service group 
-ServiceLocationRef	|	Simple type	|	O	|	Indicates the primary place of use address 
-SubscriberNameRef	|	Simple type	|	O	|	Indicates the primary place of use Name, This Name also specifies the product Admin in case of marketplace orders 
-TCRef	|	Complex type	|	O	|	Terms and Conditions is applicable for LOSG Specific T&C
-ProfileCode	|		|	O	|	Used for Product Exclusion through IFSQ (InquireFiberSeriveQualification) 
-SchedulingInfoRef	|	Simple type	|	O	|	Indicates the Ref for scheduling information 
-InstallationInstructions	|	Simple type	|	O	|	Indicates the installation instructions in an order/service 
-InstallType	|	Simple type	|	O	|	Indicates the type of installation Eg: Tech Install, Self-Install 
-InternetLOSChars	|	Complex type	|	O	|	Characteristics for Internet type of line of services only. 
-IPTVLOSChars	|	Complex type	|	O	|	Characteristics for IPTV type of line of services only. 
-DirecTVLOSChars	|	Complex type	|	O	|	Characteristics for DIRECTV type of line of services only. 
-VOIPLOSChars	|	Complex type	|	O	|	Characteristics for VOIP type of line of services only. 
-CommonLOSCharacteristics	|	Complex type	|	O	|	Characteristics for Common type of line of services only.
+[name](#name) | Array | R | 
+
+### name
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R | 
+firstName | String | O | 
+lastName | String | O | 
+[primaryContactPhones](#primarycontactphones) | Array | O | 
+
+### primaryContactPhones
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+phoneNumber | String | R | 
+contactPhoneType | String | O | 
+
+### contactPhoneType
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### addresses
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[address](#address) | Array | R | 
+
+### address
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | O | 
+addressId | String | O | 
+[unparsedAddress](#unparsedaddress) | Array | O | 
+[parsedAddress](#parsedaddress) | Array | O | 
+[additionalDetails](#additionaldetails)	|	Array	|	O	| 
+
+### unparsedAddress
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+addressLine1 | String | R | 
+city | String | R | 
+state | String | R | 
+zip | String | R | 
+
+### parsedAddress
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+houseNumber | String | O | 
+direction | String | O | 
+streetName | String | O | 
+streetType | String | O | 
+apartmentUnit | String | O | 
+apartmentUnitNumber | String | O | 
+city | String | R | 
+state | String | R | 
+zip | String | R | 
+rateZoneBanCode | String | O | 
+legalEntity | String | O | 
+buildingType | String | O | 
+tarCode | String | O | 
+rateCenterCode | String | O | 
+exchangeCode | String | O | 
+primaryNPANXX | String | O | 
+clli8 | String | O | 
+videoHubOffice | String | O | 
 
 
+### accounts
 
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[account](#account) | Array | R | 
+
+### account
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R| 
+sequence | integer | O | 
+accountCategory | String | O | 
+accountSubCategory | String | O | 
+paymentArrangement | String | O | 
+billingAccountNumber | String | O | 
+businessAccountName | String | O | 
+primaryCTN | String | O | 
+billingLanguagePreference | String | O | 
+billingAccountTelephoneNumber | String | O | 
+[billingDetail](#billingdetail) | Array | O | 
+serviceLocationReference | String | O | 
+businessAddressReference | String | O | 
+anchorCTN | String | O | 
+targetCTN | String | O | 
+ctnValidatedIndicator | boolean | O | 
+[creditCheck](#creditcheck) | Array | O | 
+[bankingPartner](#bankingpartner) | Array | O | 
+[creditAlert](#crediaAlert) | Array | O | 
+billingDeliveryPreference | String | O | 
+[electronicLetterOfAuthorization](#electronicLetterofauthorization) | Array | O | 
+bigData | String | O | 
+gigaPower | String | O | 
+[contractAcceptance](#contractacceptance) | Array | O | 
+[unifiedAccount](#unifiedaccount) | Array | O | 
+liabilityType | String | O | 
+delinquentAccountIndicator | boolean | O | 
+accountType | String | O | 
+accountSubType | String | O | 
+enterpriseType | String | O | 
+b2bReference | String | O | 
+passCode | String | O | 
+langId | String | O | 
+ebillReason | String | O | 
+landLineNumber | String | O | 
+customerCode | String | O | 
+consentToCCIndicator | boolean | O | 
+market | String | O | 
+subMarket | String | O | 
+priceCode | String | O | 
+spokenLanguagePreference | String | O | 
+accountCrossmarketIndicator | boolean | O | 
+[provisioningSystems](#provisioningsystems) | Array | O | 
+existingAutoBillStatus | String | O | 
+winBackIndicator | boolean | O | 
+thirdPartyCombinedBill | String | O | 
+[additionalDetails](#additionaldetails) | Array | O | 
+cpni | boolean | O | 
+[mdmProfileSetting](#mdmprofilesetting) | Array | O | 
+
+### accountCategory
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### accountSubCategory
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### paymentArrangement
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### billingLanguagePreference
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### billingDetail
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+nameReference | String | O | 
+addressReference | String | O | 
+previousAddress | String | O | 
+
+### creditCheck
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+creditClass | String | O | 
+creditCheckManagementTransactionId | String | O | 
+creditCheckRanIndicator | boolean | O | 
+electronicIdNumber | String | O | 
+depositRequired | String | O | 
+safeScanAlertIndicator | boolean | O | 
+singleCreditQueryWirelessIndicator | boolean | O | 
+safeScanPassIndicator | boolean | O | 
+treatmentCode | String | O | 
+treatmentMessage | String | O | 
+
+
+### promotions
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[promotion](#promotion) | Array | R | 
+
+### promotion
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R| 
+promotionCode | String | O | 
+promotionId | String | O | 
+displayLevel | String | O | 
+sequence | integer | O | 
+baseOfferId | String | O | 
+parentPricePlanCode | String | O | 
+[componentConfigurations](#componentconfigurations) | Array | O | 
+promotionName | String | O | 
+amount | Number | O | 
+percent | Number | O | 
+fixedAmount | Number | O | 
+duration | Number | O | 
+promotionType | String | O | 
+promotionCycle | String | O | 
+unitOfMeasurement | String | O | 
+effectiveInDays | Number | O | 
+complexDiscountIndicator | boolean | O | 
+couponCode | String | O | 
+[qualifyingServiceDetails](#qualifyingservicedetails) | Array | O | 
+ioSequence | String | O | 
+promotionBillingCode | String | O | 
+[additionalDetails](#additionaldetails)	|	Array	|	O	|	
+
+### displayLevel
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### componentConfigurations
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+componentCode | String | O | 
+[componentOperations](#componentoperations) | Array | O | 
+componentPath | String | O | 
+componentMapRequiredIndicator | boolean | O | 
+[attributes](#attributes) | Array | O | 
+	
+### componentOperations
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[operationNames](#operationnames) | Array | R | 
+
+
+### attributes
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+attributeKey | String | O | 
+attributeCode | String | O | 
+attributeValue | String | O | 
+[attributeOperations](#attributeoperations) | Array | O | 
+
+### attributeOperations
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[operationNames](#operationnames) | Array | R | 
+
+### qualifyingServiceDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | O | 
+qualificationServiceType | String | O | 
+[qualifyingAttributeDetails](#qualifyingattributedetails) | Array | O | 
+
+### qualifyingAttributeDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | O | 
+qualificationAttributeName | String | O | 
+qualificationAttributeValue | String | O | 
+
+### promotionType
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### promotionCycle
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### unitOfMeasurement
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+### schedulingDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[schedulingDetail](#schedulingdetail) | Array | R | 
+
+### schedulingDetail
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R | 
+[landlordDetail](#landlorddetail) | Array | O | 
+[connecTechInstallationOptions](#connectechinstallationoptions) | Array | O |
+nameReference | String | O | 
+[actualSchedule](#actualschedule) | Array | R | 
+[scheduleByDayAndTime](#schedulebydayandtime) | Array | R | 
+scheduleAsSoonAsPossibleIndicator | boolean | R | 
+billingInstallmentsIndicator | boolean | O | 
+appointmentComment | String | O | 
+installType | String | O | 
+reservationId | String | O | 
+eventCode | String | O | 
+eventCodeEnteredManuallyIndicator | boolean | O | 
+realTimeCalendarIndicator | boolean | O | 
+bestTimeToReach | String | O | 
+[additionalDetails](#additionaldetails)	| Array	| O	|	
+
+
+### landlordDetail
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+landlordName | String | O | 
+landlordPhoneNumber | String | O | 
+landlordPermission | String | O | 
+
+### landlordPermission
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | Y/N value
+
+
+### connecTechInstallationOptions
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+connecTechInstallationOption | String | O | 
+connecTechServiceDate | String | O | 
+
+### connecTechInstallationOption
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O | 
+
+
+### actualSchedule
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+selectedAppointmentDate | String | O | 
+selectedAppointmentTime | String | O | 
+startTime | String | O | 
+endTime | String | O | 
+workOrderId | String | O | 
+
+### scheduleByDayAndTime
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+monday | String | O | 
+tuesday | String | O | 
+wednesday | String | O | 
+thursday | String | O | 
+friday | String | O | 
+saturday | String | O | 
+sunday | String | O | 
+anyDayOfTheWeek | String | R | 
+
+### serviceFacilityQualifications
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[serviceFacilityQualification](#servicefacilityqualification) | Array | O | 
+
+### serviceFacilityQualification
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R | 
+addressReference | String | O | 
+preferredNetworkType | String | O | 
+profileCode | String | O | 
+frequency17MhzIndicator | boolean | O | 
+vectoringIndicator | boolean | O | 
+cpeRequiredIndicator | boolean | O | 
+[facilityCheck](#facilitycheck) | Array | O | 
+potsAvailableIndicator | boolean | O | 
+dslAvailableIndicator | boolean | O | 
+
+### facilityCheck
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[validations](#validations) | Array | O | 
+[serviceType](#servicetype) | Array | O | 
+acknowledgeIndicator | boolean | O | 
+
+### validations
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+code | String | O | 
+message | String | O | 
+
+### serviceType
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+conflictingServiceIndicator | boolean | O | 
+serviceType | String | O | 
+
+### conflictingServiceDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[conflictingServiceDetail](#conflictingservicedetail) | Array | O | 
+
+### conflictingServiceDetail
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R | 
+addressReference | String | O | 
+[productDetails](#productdetails) | Array | O | 
+accountNumber | String | O | 
+changeType | String | O | 
+disconnectNumber | String | O | 
+customerCode | String | O | 
+legacyExistIndicator | boolean | O | 
+[btn](#btn) | Array | O | 
+disconnectDate | String | O | 
+region | String | O | 
+state | String | O | 
+referallOfCallsIndicator | boolean | O | 
+[dslmemberDetail](#dslmemberdetail) | Array | 
+
+### productDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+productDescription | String | O | 
+action | String | O | 
+previousProductTransportType | String | O | 
+productCode | String | O | 
+packageCode | String | O | 
+
+### btn
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+paymentAmount | nunmber | O | 
+customerCode | String | O | 
+tn | String | O | 
+
+### regio
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	
+
+### state
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	
+
+### dslmemberDetail
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+memberId | String | O | 
+authenticatedIndicator | boolean | O | 
+reuseDSLMemberIdIndicator | boolean | O | 
+
+
+### dueAmount
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+amount | number | O | 
+baseAmount | number | O | 
+currencyType | String | O | Currency Type
+installmentEligibility | String | O | 
+msrp | number | O | 
+priceType | String | O | 
+[taxDetail](#taxdetail) | Array | O | 
+total | number | O | 
+
+### currencyType
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	USD
+
+### installmentEligibility
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	Y/N value for eligibility for installments
+
+### priceType
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	Type of pricing for ex RC, NRC etc
+
+### taxDetail
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+amount | number | O | 
+[preCalculatedTax](#precalculatedtax) | Array | O | 
+[lineItemTaxes](#lineitemtaxes) | Array | O |
+
+### preCalculatedTax
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+taxableCost | number | O | 
+taxableMSRP | number | O | 
+taxableUnitPrice | number | O | 
+orderTaxAreaId | number | O | 
+shipFromTaxAreaId | number | O | 
+shipToTaxAreaId | number | O | 
+exemptionId | number | O | 
+
+### lineItemTaxes
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+taxLineId | number | O | 
+taxCode | String | O | 
+memo | String | O | 
+printName | String | O | 
+taxable | String | O | 
+skuSpecific | String | O | 
+jurisdictionLevel | String | O | 
+jurisdictionName | String | O | 
+taxAmount | number | O | 
+taxRate | number | O | 
+taxDate | String | O | 
+[taxAuthoritiesList](#taxauthoritieslist) | Array | O | 
+ 
+### taxAuthoritiesList
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[taxAuthorities](#taxAuthorities) | Array | R | 
+
+### taxAuthorities
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+taxAuthorityCode | String | R | 
+taxAuthorityValue | number | R | 
+
+### termsAndConditions
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+[termsAndConditionAccepted](#termsandconditionsaccepted) | Array | R | 
+ 
+### termsAndConditionAccepted
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+id | String | R | 
+agreementType | String | O | Type of agreement (for products)
+agreementText | String | O | Text of agreement
+accepted | String | R |  Customer acceptance indicator
+timestamp | String | O | 
+version | String | O | 
+orderLevelIndicator | boolean | O | TC's at order level
+
+### agreementType
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	Type of agreement (for products)
+
+### accepted
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	Y/N value for TC acceptance
+
+
+### orderContact
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+nameReference | String | R | Customer name
+primaryEmailAddress | String | R | Primary contact email
+secondaryEmailAddress | String | O | Secondary contact email
+additionalEmailRecipients | String | O | Additonal contact email
+preferredContactMethod | String | O | Modes for contacting customer
+preferredTimeOfDayForContact | String | O | Best time to contact customer
+orderConfirmationByEmailPermissionIndicator | boolean | O | Permission to send the order confirmation email
+[additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional contact details will be populated as code value pair under this structure
+
+### preferredContactMethod
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+enum | String | O |	Modes for contacting customer 
+
+
+### orderSource
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+channel | String | R | Order Source Channel
+salesChannelType | String | O| 
+application | String | R | Order Source Application
+sequence | number | O | 
+[additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional order source details will be populated as code value pair under this structure
+
+
+### additionalDetails
+
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
+type | String | O | 
+parentType | String | O | 
+code | String | O| 
+value | String | O |  
 
 > The above command returns JSON structured like this:
 
