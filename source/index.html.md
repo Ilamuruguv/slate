@@ -49,7 +49,7 @@ Header(s)
 
 
 
-![postman](/images/postman.png) Get the [Postman collection for NEW DTV standalone] (https://www.getpostman.com/collections/f7713b86beba9b8bdfdf) from this link to test with the OCE test instance.
+![postman](/images/postman.png) Get the [Postman collection for NEW DTV standalone] (https://www.getpostman.com/collections/7cecd0d9e68134fe0b61) from this link to test with the OCE test instance.
 
 > To test the process order api in java dme2 client, use the below code:
 
