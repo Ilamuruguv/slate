@@ -1195,21 +1195,21 @@ hasMoreThanThreeFloors | boolean | O |
 
 ### lineItems
 
-Parameter  |  Data Type  |  Required  |  Value Rules
-  -------------  |   -------------  |   ------------- 
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
 [lineItem] (#lineitem) |  array  |  O  |  For Mobililty/VOIP each CTN/Line/Number(Cell/Voip) represents a subscriber.
 
 
 ### lineItem
 
-Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   ------------- 
+Parameter  | Data Type | Required | Value Rules
+---------  | --------- | -------- | -----------
 id  |  string  |  O  |  
 sequence  |  integer  |  O  |  
 productCode  |  string  |  O  | Represents the ProductCode in the ProductCatalog, If not available for any line Item then "NOT_AVAILABLE"
 productSKU  |  string  |  O  | Applicable only for ProductType = HardGood, DEVICE, SIM, COLLATERAL, ACCESORY. Stock Keeping Unit. A number assigned to SIM in an inventory database. NOTE: SKU numbers are used to track and control inventory.  
 productSubType  |  string  |  O  |  
-billingCode  |  string  |  O  |  Applicable for ProductType = OPTIONAL_FEATURE or PLAN or INCLUDED_FEATURE. Not applicable for SHIPPING_FEE. NOT_AVAILABLE will be populated for the ProductType = MISC_CHARGE. A unique code assigned to each Rate Plan in the billing system (CARE & /NBI/Telegence).
+billingCode  |  string  |  O  |  Applicable for ProductType = OPTIONAL_FEATURE or PLAN or INCLUDED_FEATURE. Not applicable for SHIPPING_FEE. NOT_AVAILABLE will be populated for the ProductType is MISC_CHARGE. A unique code assigned to each Rate Plan in the billing system (CARE & /NBI/Telegence).
 socForPreviousDevice  |  string  |  O  |  
 productType  |  string  |  O  |  Enum Values: PLAN, INCLUDED_FEATURE,OPTIONAL_FEATURE, HARDGOOD,MISC_CHARGE, OTT, ADDRESS_CHANGE, PRODUCT_SERVICE
 displayName  |  string  |  O  |  
@@ -1286,7 +1286,7 @@ equipmentInstallmentPlanIndicator | boolean | O |
 
  
  
- ### promotionReferences
+### promotionReferences
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1294,7 +1294,7 @@ equipmentInstallmentPlanIndicator | boolean | O |
 
  
  
- ### groupReferences
+### groupReferences
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1302,7 +1302,7 @@ equipmentInstallmentPlanIndicator | boolean | O |
 
  
  
- ### characteristics
+### characteristics
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1316,7 +1316,7 @@ equipmentInstallmentPlanIndicator | boolean | O |
 
  
  
- ### commonCharacteristics
+### commonCharacteristics
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1328,7 +1328,7 @@ productSpecificationId  |  string  |  O  |
  
  
  
- ###  componentConfigurations
+###  componentConfigurations
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1340,7 +1340,7 @@ componentMapRequiredIndicator  |  boolean  |  O  |
 
  
  
- ### componentOperations
+### componentOperations
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1348,7 +1348,7 @@ componentMapRequiredIndicator  |  boolean  |  O  |
 
 
  
- ### attributes
+### attributes
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1359,7 +1359,7 @@ attributeValue  |  string  |  O  |
 
  
  
- ### attributeOperations
+### attributeOperations
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1367,7 +1367,7 @@ attributeValue  |  string  |  O  |
   
   
   
- ### fees
+### fees
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1378,7 +1378,7 @@ waivedReason  |  string  |  O  |
 
  
  
- ### voipLineItemCharacteristics
+### voipLineItemCharacteristics
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1387,7 +1387,7 @@ uverseMessaging  |  string  |  R  |
 
  
  
- ###  internetLineItemCharacteristics
+###  internetLineItemCharacteristics
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1401,7 +1401,7 @@ ipType  |  string  |  O  |
 
  
  
- ### addOnSolutionCharacterstics
+### addOnSolutionCharacterstics
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1412,7 +1412,7 @@ parentItem  |  string  |  O  |
 
  
  
- ### wirelessLineItemCharacteristics
+### wirelessLineItemCharacteristics
 
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1430,7 +1430,7 @@ omniRequestStatus  |  string  |  O  |
 
  
  
- ### tradeInDetail
+### tradeInDetail
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1467,7 +1467,7 @@ apnName  |  string  |  O  |
 
  
   
-  ### additionalDetail
+### additionalDetail
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1478,7 +1478,7 @@ value  |  string  |  R  |
 
  
  
-  attDynamicTrafficManager
+### attDynamicTrafficManager
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1497,7 +1497,7 @@ manifestLabel  |  string  |  O  |
  
  
  
- ### additionalDetail
+### additionalDetail
  
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1536,7 +1536,7 @@ whiteGloveDeliveryPartner  |  string  |  O  |
 
 
 
- ### shipmentCommitDate
+### shipmentCommitDate
  
  Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1545,7 +1545,7 @@ toDate  |  long  |  O  |
 
 
  
- ### deliveryByDate
+### deliveryByDate
  
  Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1554,7 +1554,7 @@ toDate  |  long  |  O  |
 
 
 
- ### wirelessHardGoodCharacteristics
+### wirelessHardGoodCharacteristics
  
    Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1572,7 +1572,7 @@ deviceCategory  |  string  |  O  |
 
  
  
- ### supplyChainDetail
+### supplyChainDetail
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1593,7 +1593,7 @@ claimRMANumber  |  string  |  O  |
 
  
  
- ### orderDocumentDetail
+### orderDocumentDetail
  
  Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1603,7 +1603,7 @@ orderId  |  string  |  O  |
 
  
  
- ### additionalDetails
+### additionalDetails
 
   Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
@@ -1611,7 +1611,7 @@ orderId  |  string  |  O  |
  
  
  
- ### additionalDetail
+### additionalDetail
  
  Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
