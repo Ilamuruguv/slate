@@ -1034,6 +1034,7 @@ curl "api_endpoint_here"
 ```
 
 
+
 ### order
 
 
@@ -1082,25 +1083,12 @@ Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 id	| String |	R	|	Unique identifier to identify a particular Product Group 
 name	|	String	|	O	|	Unique name to identify a partial Product Group 
-type	|	String	|	O	|	This value identifies if the group is a line of service 
+type	|	String	|	O	|	This value identifies if the group is a line of service. Enum Values: BUNDLE,PACKAGE, SHARED_PLAN, INCLUDED, LINE_OF_SERVICE, SUBORDINANT.
 sequence	|	integer	|	O	|	This value starts with 1 and indicates the sequencing of the line of services in the Order transaction 
 [price](#price)	|	Array	|	O	|	This price info structure is used to identify subtotal i.e., amount and total price for an LOSG. 
 [promotionReferences](#promotionreferences)	| Array	|	O	|	Indicates a promotion ref after all promotions applied. Eg: for a combined bill promotion 
 [characteristics](#characteristics)	| Array |	O	|	Characteristics for Group type - line of service group (LOSG) 
 [additionalDetails](#additionaldetails)	|	Array	|	O	|	
-
-### price
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-amount | number | O | 
-baseAmount | number | O | 
-currencyType | String | O | 
-installmentEligibility
-msrp | number | O | 
-priceType | String | O | 
-[taxDetail](#taxdetail) | Array | O | 
-total | number | O | 
 
 ### promotionReferences
 
@@ -1129,28 +1117,28 @@ type | String | O |
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-losgReferenceId | String | O | 
-sequence | integer | O | 
-losgType | String | R | 
-actionType | String | O | 
-actionReason | String | O | 
-productCategory | String | R | 
+losgReferenceId | String | O | Unique value across system
+sequence | integer | O | Value has to be only numeric ( Max 4 digits) for Common Order or if IsCommonOrder Flag is true. Unique for an order
+losgType | String | R | Enum Values: NO_CHANGE, NEW, AL, ALF, UP,UNLOCK, UNIFY, ACC, DISCONNECT, CHANGE, AMEND, WINOVER, WINBACK, DEVICE, REWARDS/GIFT
+actionType | String | O | Applicable for POC / Service Request. Enum Values: CHANGE_RATEPLAN, CHANGE_RATEPLAN_WITH_DEVICE, UPDATE_FEATURE, UPDATE_PDP, UPDATE_FEATURE_WITH_DEVICE, UPDATE_DEVICE, UPDATE_SUBSCRIBER, UPDATE_BILLING_ACCOUNT, SUSPEND_SERVICE, REINSTATE_SERVICE, CHANGE_CTN, REASSIGN_FAN, REASSIGN_FAN_CHANGES, TRANSFER_BAN, TRANSFER_BAN_CHANGES, TOBR, CREATE_SDG, JOIN_SDG, CHANGE_SDG, CHANGE_GROUP_RATEPLAN, MIGRATE_TO_NEW_GROUP, MIGRATE_TO_EXISTING_GROUP, MIGRATE_EXISTING_GROUP_TO_IND, CHANGE_GROUP_FEATURES, SUSPEND_STOLEN_DEVICE_WITH_NETWORKBLOCKED_IMEI, BULK_MANAGE_APPLICATION, BULK_SPLIT_INVOICING, CANCEL_SERVICE, RESUME_SERVICE, CHANGE_PRIMARY_CTN, CANCEL_FUTURE_SDG, CANCEL_FUTURE_SDG_JOIN, CANCEL_FUTURE_SDG_EXIT, CANCEL_FUTURE_SERVICE, ADDRESS_RESEARCH, NOTIFY_ME, CCAR_DEENROLLMENT, UPDATE_SUBSCRIBER_PROMO, IRU_ENROLLMENT.ActionType indicates the type of service request. ActionType is required for all service Care Request (SCR).
+actionReason | String | O | Action Reason will have the reason for the service request.
+productCategory | String | R | Enum Values: WIRELESS,INTERNET, IPTV,VOIP,DIRECTV, MISC, WIRELESS_DL, APP, ADDP, DTVNOW, INTERNET_FW
 primaryIndicator | boolean | O | 
-dealerCode | String | O | 
-market | String | O | 
-subMarket | String | O | 
+dealerCode | String | O | Example: WIRELESS,INTERNET, IPTV,VOIP,DIRECTV. Compensation Code, also known as Dealer Code or Commission Code. Used to compute gross adds and to track orange orders in backend systems. Client systems should pass Z0066
+market | String | O | Not applicable for Donor LOSG without SIM & for CHANGE LOSG
+subMarket | String | O | Not applicable for Donor LOSG without SIM & for CHANGE LOSG
 preferredAreaCode | String | O | 
 serviceArea | String | O | 
 serviceAreaName | String | O | 
 priceCode | String | O | 
-accountReference | String | O | 
+accountReference | String | O | CUSTOMER_ACCT_[0-9]{2}
 requestedExecutionDate | String | O | 
 effectiveDate | String | O | 
-[losgStatus](#losgstatus) | Array | O | 
-serviceLocationReference | String | O | 
-subscriberNameReference | String | O | 
-serviceQualificationReference | String | O | 
-[conflictingServiceDetailReferences](#conflictingservicedetailreferences) | Array | O | 
+[losgStatus](#losgstatus) | Array | O | Enum : SYS_RECEIVED,SYS_PROCESSING,IN_QUEUE,SYS_HOLD,REP_PROCESSING,REP_HOLD,FOLLOWUP_REQUIRED,PENDING,SUBMITTED,SHIPPED,ACTIVATED,CANCELLED, NO_CHANGE, APPROVED, DENIED
+serviceLocationReference | String | O | SERVICE_QLFY_[0-9]{2} 
+subscriberNameReference | String | O | Name_[0-9]{2}
+serviceQualificationReference | String | O | SERVICE_QLFY_[0-9]{2}
+[conflictingServiceDetailReferences](#conflictingservicedetailreferences) | Array | O | SERVICE_QLFY_[0-9]{2}
 [termsAndConditionReferences](#termsandconditionreferences) | Array | O |
 profileCode | String | O | 
 schedulingDetailReference | String | O | 
@@ -1159,18 +1147,19 @@ schedulingDetailReference | String | O |
 installType | String | O | 
 notes | String | O | 
 [termsAndConditionAccepted](#termsandconditionaccepted) | Array | O | 
-[voipLOSCharacteristics](#voiploscharacteristics) | Array | O | 
-[direcTVLOSCharacteristics](#directvloscharacteristics) | Array | O | 
-[iptvLOSCharacteristics](#iptvloscharacteristics) | Array | O | 
-[internetLOSCharacteristics](#internetloscharacteristics) | Array | O | 
-[wirelessLOSCharacteristics](#wirelessloscharacteristics) | Array | O | 
+[voipLOSCharacteristics](#voiploscharacteristics) | Array | O | LineItem level characteristics for core type VOIP
+[direcTVLOSCharacteristics](#directvloscharacteristics) | Array | O | LineItem level characteristics for core type DirectTV
+[iptvLOSCharacteristics](#iptvloscharacteristics) | Array | O | LineItem level characteristics for core type IPTV
+[internetLOSCharacteristics](#internetloscharacteristics) | Array | O | LineItem level characteristics for core type Internet
+[wirelessLOSCharacteristics](#wirelessloscharacteristics) | Array | O | LineItem level characteristics for core type Wireless
 [addpLOSCharacteristics](#addploscharacteristics) | Array | O | 
-[commonLOSCharacteristics](#commonloscharacteristics) | Array | O | 
+[commonLOSCharacteristics](#commonloscharacteristics) | Array | O | Enum values: D2LITE, DEALER_RESTRICTED, CONNECTED_PROPERTY /promotion	
 [compensation](#compensation) | Array | O |
-fulfillmentMethod | String | O | 
-shippingDetailReference | String | O | 
-[userDefinedLabels](#userdefinedlabels) | Array | O | 
-commercePartnerCode | String | O | 
+fulfillmentMethod | String | O | Only for ProductType = HardGood. Enum Values: DF, C2S, ACTIVATION, CARE, ED (Electronic Delivery), PDO, DOO.
+shippingDetailReference | String | O | SHIPPING_INFO_[0-9]{2}; Only for Wireless,  ProductType = HardGood and FulfillmentMethod = DF except for Trade-in and BYOD
+[userDefinedLabels](#userdefinedlabels) | Array | O | User Defined Lables
+commercePartnerCode | String | O | commercePartnerCode will receive 5 digit alpha numeric value
+commercePartnerName | String | O | commercePartnerName will receive values i.e.., Walmart, COSTCO
 [additionalDetails](#additionaldetails) | Array | O | 
 
 
@@ -1186,7 +1175,7 @@ Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 internetProtocolDigitalSubscriberLineAccess | String | O | 
 primaryNetworkType | String | O | 
-internetProgramType | String | O | 
+internetProgramType | String | O | Enum values: DSL-FASTACCESS, DSL-HIS, "GP","BF","IPBB"
 gatewayCTN | String | O | 
 gatewayCTNStatus | String | O | 
 [additionalDetails](#additionaldetails) | Array | O | 
@@ -1197,168 +1186,102 @@ gatewayCTNStatus | String | O |
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 serviceAgreement | String | O | 
-offerLanguage | String | O | 
-dealerId | String | O | 
-marketingSourceCode | String | O | 
-moveInOrder | String | O | 
+offerLanguage | String | O | DTV Channel Language
+dealerId | String | O | Identifies the DTV sales channel
+marketingSourceCode | String | O | Code used to determine Joint Bill discount
+moveInOrder | String | O | Indicates customer placing a new  DTV order , but a DTV service already exists in the same service address by different customer.
 hasMoreThanThreeFloors | boolean | O | 
 
 
 ### lineItems
 
 Parameter  |  Data Type  |  Required  |  Value Rules
-  -------------  |   -------------  |   -------------  |   -------------
-[lineItem] (#lineitem) |  array  |  O  |  
-
+  -------------  |   -------------  |   ------------- 
+[lineItem] (#lineitem) |  array  |  O  |  For Mobililty/VOIP each CTN/Line/Number(Cell/Voip) represents a subscriber.
 
 
 ### lineItem
 
 Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
+ -------------  |   -------------  |   ------------- 
 id  |  string  |  O  |  
 sequence  |  integer  |  O  |  
-productCode  |  string  |  O  |  
-productSKU  |  string  |  O  |  
+productCode  |  string  |  O  | Represents the ProductCode in the ProductCatalog, If not available for any line Item then "NOT_AVAILABLE"
+productSKU  |  string  |  O  | Applicable only for ProductType = HardGood, DEVICE, SIM, COLLATERAL, ACCESORY. Stock Keeping Unit. A number assigned to SIM in an inventory database. NOTE: SKU numbers are used to track and control inventory.  
 productSubType  |  string  |  O  |  
-billingCode  |  string  |  O  |  
+billingCode  |  string  |  O  |  Applicable for ProductType = OPTIONAL_FEATURE or PLAN or INCLUDED_FEATURE. Not applicable for SHIPPING_FEE. NOT_AVAILABLE will be populated for the ProductType = MISC_CHARGE. A unique code assigned to each Rate Plan in the billing system (CARE & /NBI/Telegence).
 socForPreviousDevice  |  string  |  O  |  
-productType  |  string  |  O  |  
+productType  |  string  |  O  |  Enum Values: PLAN, INCLUDED_FEATURE,OPTIONAL_FEATURE, HARDGOOD,MISC_CHARGE, OTT, ADDRESS_CHANGE, PRODUCT_SERVICE
 displayName  |  string  |  O  |  
-systemName  |  string  |  O  |  
-description  |  string  |  O  |  
-action  |  string  |  O  |  
+systemName  |  string  |  O  |  Enum Values: SystemX, OMS, DTV, PHOENIX, YODA, "DIRECTVNOW.COM","EVERGENT"
+description  |  string  |  O  |  Product Description
+action  |  string  |  O  |  Enum Values: ADD, UPDATE, REMOVE, NO_CHANGE, INCREMENT, DECREMENT
 operation  |  string  |  O  |  
-[price] (#price) |  array  |  O  |  
-locationId  |  string  |  O  |  
-[payments] (#payments)  |  array  |  O  |  
+[price] (#price) |  array  |  O  | Not applicable for Trade-in Device 
+locationId  |  string  |  O  |  Applicable only for ProductType = HardGood
+[payments] (#payments)  |  array  |  O  |  Applicable for all non Zero Priced Items or auto pay. Plan/Feature Effective Date. DTVNOW will be mapped to Bill Start Date
 effectiveDate  |  long  |  O  |  
-[contractDetails] (#contractdetails)  |  array  |  O  |  
-quantity  |  number  |  O  |  
+[contractDetails] (#contractdetails)  |  array  |  O  |  Required for wireless HardgoodType = Device lineitems
+quantity  |  number  |  O  |  Applicable only when the Action = ADD
 notes  |  string  |  O  |  
 status  |  string  |  O  |  
 [promotionReferences] (#promotionreferences)  |  array  |  O  |  
 [groupReferences] (#groupreferences)  |  array  |  O  |  
-[characteristics] (#characteristics)  |  array  |  O  |  
-[hardGood] (#hardgood)  |  array  |  O  |  
+[characteristics] (#characteristics)  |  array  |  O  |  Applicable only for Core Product Items. Characteristics specific to a particular core product category
+[hardGood] (#hardgood)  |  array  |  O  |  Only for ProductType = HardGood. Generic Equipment to represent Wireless equipement(Handset), STB or Modem
 [supplyChainDetail] (#supplychaindetail) |  array  |  O  |  
-subscriptionId  |  string  |  O  |  
-[additionalDetails] (#additionaldetails)  |  array  |  O  |  
-
-
+subscriptionId  |  string  |  O  |  Have to be present for CHANGE scenarios. subscriptionId is the ID generated by DCM for each product subscriptions
+[additionalDetails] (#additionaldetails)  |  array  |  O  |  Name/Value pair to support extra info related to a package
 
 ### price
 
 Parameter  |  Data Type  |  Required  |  Value Rules
  -------------  |   -------------  |   -------------  |   -------------
-amount  |  number  |  O  |  
-baseAmount  |  number  |  O  |  
-currencyType  |  string  |  O  |  
-installmentEligibility  |  string  |  O  |  
-msrp  |  number  |  O  |  
-priceType  |  string  |  O  |  
-[taxDetail] (#taxdetail)  |  array  |  O  |  
-total  |  number  |  O  |  
+amount | number | R | Decimal with fraction digits: 2; After promotion price; Price of a LineItem before tax; 0.00 is also a valid value
+baseAmount | number | O | This is the maximum amount that customer will pay for the promotional device. Applicable only for Line Item level price
+currencyType | String | O | If Price Info is present. Enum Values: USD
+installmentEligibility | String | O | Only for lineItems eligibile for Installment; Enum Values: Y,N
+msrp | number | O | Manufacturer suggested retail price. Applicable only if the ContractType is Lease.
+priceType | String | O | Enum Values: RC, NRC, DueToday, DUENOW, NOT_APPLICABLE, NRC_C. DueNow is collected in OCE. Due Today amount is collected by YODA.
+[taxDetail](#taxdetail) | Array | O | 
+total | number | O | 
+
+### payments
+Parameter  |  Data Type  |  Required  |  Value Rules
+-------------  |   -------------  |   -------------  |   -------------
+[payment] (#payment) | array | O | 
 
 
-
-### taxDetail
- 
- Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
-amount | number | O | 
-[preCalculatedTax] (#precalculatedtax) | array | O | 
-[lineItemTaxes] (#lineitemtaxes) | array | O | 
-
-
-### preCalculatedTax
-
- Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
-taxableCost  |  number  |  O  |  
-taxableMSRP  |  number  |  O  |  
-taxableUnitPrice  |  number  |  O  |  
-orderTaxAreaId  |  number  |  O  |  
-shipFromTaxAreaId  |  number  |  O  |  
-shipToTaxAreaId  |  number  |  O  |  
-exemptionId  |  number  |  O  |  
-
-
-### lineItemTaxes
-
- Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
-taxLineId  |  number  |  O  |  
-taxCode  |  number  |  O  |  
-memo  |  string  |  O  |  
-printName  |  string  |  O  |  
-taxable  |  string  |  O  |  
-skuSpecific  |  string  |  O  |  
-jurisdictionLevel  |  string  |  O  |  
-jurisdictionName  |  string  |  O  |  
-taxAmount  |  string  |  O  |  
-taxRate  |  number  |  O  |  
-taxDate  |  number  |  O  |  
-[taxAuthoritiesList] (#taxauthoritieslist)  |  array  |  O  |  
-
-
- 
- ### taxAuthoritiesList
-
-  Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
- [taxAuthorities] (#taxauthorities)  |  array  |  R  |  
-
- 
- 
- ### taxAuthorities
-  Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
-taxAuthorityCode  |  string  |  R  |  
-taxAuthorityValue  |  string  |  R  |  
-
-
-
- ### payments
-  Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
- [payment] (#payment) | array | O | 
-
- 
- 
- ### payment
-
-  Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
+### payment
+Parameter  |  Data Type  |  Required  |  Value Rules
+-------------  |   -------------  |   -------------  |   -------------
 amount | number | O | 
 currencyType | string | O | 
 numberOfInstallment | number | O | 
 paymentOptionReference | string | O | 
 
+### contractDetails
 
- 
-  ### contractDetails
-
-  Parameter  |  Data Type  |  Required  |  Value Rules
- -------------  |   -------------  |   -------------  |   -------------
-installmentPlanId | number | O | 
+Parameter  |  Data Type  |  Required  |  Value Rules
+-------------  |   -------------  |   -------------  |   -------------
+installmentPlanId | number | O | AT&T Next Order Installment ID
 contractDisplayName | string | O | 
-installmentPlanDefinition | string | O | 
-annualPercentageRate | number | O | 
-financeCharge | number | O | 
-amountFinanced | number | O | 
+installmentPlanDefinition | string | O | System name for contract
+annualPercentageRate | number | O | The cost of your credit as a yearly rate
+financeCharge | number | O | The dollar amount the credit will cost you
+amountFinanced | number | O | The amount of credit provided to you or on your behalf
 balancedAmount | number | O | 
-totalSalePrice | number | O | 
-downPayment | number | O | 
+totalSalePrice | number | O | The total cost of your purchase on credit, including your down payment of $0.00
+downPayment | number | O | Customer pay some initial amount as down payment while placing the order
 downPaymentPercent | number | O | 
 prepaidFinanceCharge | number | O | 
-installmentAmount | number | O | 
+installmentAmount | number | O | This will be populated only when the device is on Emerald contract.
 installmentStatus | string | O | 
 installmentType | string | O | 
-contractType | string | O | 
-contractSystem | string | O | 
+contractType | string | O | Enum Values: REGULAR, LEASE, INSTALLMENT, NOCOMMIT. Contract Type of the device (REGULAR OR LEASE OR ISTALLMENT).
+contractSystem | string | O | ENUM: OPTICAL. Contract sent by front end system; N - Contract not sent by front end system.
 contractSent | string | O | 
-contractLength | number | O | 
+contractLength | number | O | Remaining contract Length
 equipmentInstallmentPlanIndicator | boolean | O | 
 
  
@@ -1889,22 +1812,22 @@ Parameter  | Data Type | Required | Value Rules
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-id | String | R| 
-promotionCode | String | O | 
-promotionId | String | O | 
-displayLevel | String | O | 
+id | String | R| PROMOTION_[0-9]{2}
+promotionCode | String | O | Unique Id for a promotion defined in catalog /Billing Code
+promotionId | String | O | Offer Id of promotion from product catalog
+displayLevel | String | O | Display sequence or Apply Sequence
 sequence | integer | O | 
-baseOfferId | String | O | 
+baseOfferId | String | O | Base Offer Id of promotion from product catalog
 parentPricePlanCode | String | O | 
-[componentConfigurations](#componentconfigurations) | Array | O | 
-promotionName | String | O | 
-amount | Number | O | 
-percent | Number | O | 
-fixedAmount | Number | O | 
-duration | Number | O | 
-promotionType | String | O | 
-promotionCycle | String | O | 
-unitOfMeasurement | String | O | 
+[componentConfigurations](#componentconfigurations) | Array | O | Data mapping for Uverse information to OMS Components in Dynamic Product Structure
+promotionName | String | O | Name of Promotion
+amount | Number | O | Promotional Amount
+percent | Number | O | Applicable when Unit Of Measurement is Percentage
+fixedAmount | Number | O | Fixed Price Promotion
+duration | Number | O | Duration Of Promotion in Months
+promotionType | String | O | Enum Values: OFFER, REWARD, PROMOTION, BOGO, MANUALBILLCREDIT, BILLCREDITWITHQUALIFIER, INSTANTCREDIT, GENERALBILLCREDIT, MONTHLYCREDIT
+promotionCycle | String | O | Enum Values: MONTHLY,  QUATERLY,  WEEKLY, ONETIME 
+unitOfMeasurement | String | O | Enum Values: FLATOFF,   PERCENTAGE
 effectiveInDays | Number | O | 
 complexDiscountIndicator | boolean | O | 
 couponCode | String | O | 
@@ -1912,11 +1835,6 @@ couponCode | String | O |
 ioSequence | String | O | 
 promotionBillingCode | String | O | 
 [additionalDetails](#additionaldetails)	|	Array	|	O	|	
-
-### displayLevel
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O | 
 
 ### componentConfigurations
 
@@ -1997,14 +1915,14 @@ id | String | R |
 nameReference | String | O | 
 [actualSchedule](#actualschedule) | Array | R | 
 [scheduleByDayAndTime](#schedulebydayandtime) | Array | R | 
-scheduleAsSoonAsPossibleIndicator | boolean | R | 
+scheduleAsSoonAsPossibleIndicator | boolean | R | Choice between ScheduleAsSoonAsPossible and ScheduleByDayAndTime
 billingInstallmentsIndicator | boolean | O | 
 appointmentComment | String | O | 
 installType | String | O | 
 reservationId | String | O | 
 eventCode | String | O | 
 eventCodeEnteredManuallyIndicator | boolean | O | 
-realTimeCalendarIndicator | boolean | O | 
+realTimeCalendarIndicator | boolean | O | If value is false, that means a mock calendar was shown to the Gigapower customer and Automation will disqualify. If no value is sent, OCE will take it as true. i.e. Real Time Calendar was shown to customer.Dummy calendar is only conditionally shown on Gigapower ordering flow. This should always be true for non-gigapower orders.
 bestTimeToReach | String | O | 
 [additionalDetails](#additionaldetails)	| Array	| O	|	
 
@@ -2014,26 +1932,16 @@ bestTimeToReach | String | O |
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 landlordName | String | O | 
-landlordPhoneNumber | String | O | 
-landlordPermission | String | O | 
-
-### landlordPermission
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O | Y/N value
+landlordPhoneNumber | String | O | [0-9]{10}
+landlordPermission | String | O |  Enum Values: Y, N
 
 
 ### connecTechInstallationOptions
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-connecTechInstallationOption | String | O | 
+connecTechInstallationOption | String | O | Enum Values: HNI, CCI, SUPPORT_PLUS, NONE
 connecTechServiceDate | String | O | 
-
-### connecTechInstallationOption
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O | 
 
 
 ### actualSchedule
@@ -2112,18 +2020,18 @@ Parameter  | Data Type | Required | Value Rules
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-id | String | R | 
-addressReference | String | O | 
+id | String | R | CONF_SRV_INFO_[0-9]{2}
+addressReference | String | O | Address_[0-9]{2}
 [productDetails](#productdetails) | Array | O | 
 accountNumber | String | O | 
 changeType | String | O | 
-disconnectNumber | String | O | 
+disconnectNumber | String | O | [0-9]{10}
 customerCode | String | O | 
 legacyExistIndicator | boolean | O | 
 [btn](#btn) | Array | O | 
 disconnectDate | String | O | 
-region | String | O | 
-state | String | O | 
+region | String | O | Enum Values: SOUTHWEST, WEST, MIDWEST, EAST, SOUTHEAST, UVERSE, ACCESSORY
+state | String | O | Enum Values: AA, AK, AL,AR, AZ, AP, AE, CA, CO, CT, DC, DE, FL, FPO, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, PR, RI, SC, SD, TN, TX, UT, VA, VI, VT, WA, WI, WV, WY
 referallOfCallsIndicator | boolean | O | 
 [dslmemberDetail](#dslmemberdetail) | Array | 
 
@@ -2145,17 +2053,6 @@ paymentAmount | nunmber | O |
 customerCode | String | O | 
 tn | String | O | 
 
-### regio
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	
-
-### state
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	
 
 ### dslmemberDetail
 
@@ -2170,32 +2067,14 @@ reuseDSLMemberIdIndicator | boolean | O |
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-amount | number | O | 
-baseAmount | number | O | 
-currencyType | String | O | Currency Type
-installmentEligibility | String | O | 
-msrp | number | O | 
-priceType | String | O | 
+amount | number | R | Decimal with fraction digits: 2; After promotion price; Price of a LineItem before tax; 0.00 is also a valid value
+baseAmount | number | O | This is the maximum amount that customer will pay for the promotional device. Applicable only for Line Item level price
+currencyType | String | O | If Price Info is present. Enum Values: USD
+installmentEligibility | String | O | Only for lineItems eligibile for Installment; Enum Values: Y,N
+msrp | number | O | Manufacturer suggested retail price. Applicable only if the ContractType is Lease.
+priceType | String | O | Enum Values: RC, NRC, DueToday, DUENOW, NOT_APPLICABLE, NRC_C. DueNow is collected in OCE. Due Today amount is collected by YODA.
 [taxDetail](#taxdetail) | Array | O | 
 total | number | O | 
-
-### currencyType
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	USD
-
-### installmentEligibility
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	Y/N value for eligibility for installments
-
-### priceType
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	Type of pricing for ex RC, NRC etc
 
 ### taxDetail
 
@@ -2238,14 +2117,14 @@ taxDate | String | O |
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-[taxAuthorities](#taxAuthorities) | Array | R | 
+[taxAuthorities](#taxAuthorities) | Array | R | Taxing Authority Code for State, City, County etc., This is an output of the CalculateUniversalTax it will go to OTSM.
 
 ### taxAuthorities
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-taxAuthorityCode | String | R | 
-taxAuthorityValue | number | R | 
+taxAuthorityCode | String | R | Code will have 1, 2, 3 depending on city, county or state.
+taxAuthorityValue | number | R | This will store the dollar value of the tax
 
 ### termsAndConditions
 
@@ -2258,54 +2137,36 @@ Parameter  | Data Type | Required | Value Rules
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
 id | String | R | 
-agreementType | String | O | Type of agreement (for products)
-agreementText | String | O | Text of agreement
-accepted | String | R |  Customer acceptance indicator
+agreementType | String | O | Agreement Types sent to OCE. Its a ENUM. Values are: PROMTIONAL_ETF_SAVING, SUPPORT_PLUS, AUTO_PAY, MOBILE_ALERT, PAPERLESS_BILLING, DIRECTV, UVERSE_TV, UVERSE_INTERNET, NON_RECURR_INST_BILLING, CON, DEV, WCA, RIA, MI, MPP, MDPP, TOS, DL_AGREEMENT, CBR_CON, ADDON-SOLUTIONS, DSL, DTVNNOW, ADDP_TOS, FIXEDWIRELESS, POTS
+agreementText | String | O | Agreement Text
+accepted | String | R |  Customer Acceptance. Enum Values: Y, N
 timestamp | String | O | 
 version | String | O | 
+orderLevelIndicator | O | boolean | Applicable for Order Level T&C
 orderLevelIndicator | boolean | O | TC's at order level
-
-### agreementType
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	Type of agreement (for products)
-
-### accepted
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	Y/N value for TC acceptance
-
 
 ### orderContact
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-nameReference | String | R | Customer name
-primaryEmailAddress | String | R | Primary contact email
-secondaryEmailAddress | String | O | Secondary contact email
-additionalEmailRecipients | String | O | Additonal contact email
-preferredContactMethod | String | O | Modes for contacting customer
+nameReference | String | R | Customer's name
+primaryEmailAddress | String | R | Primary Customer Contact Email
+secondaryEmailAddress | String | O | Secondary Customer Contact Email
+additionalEmailRecipients | String | O | Additonal Contact Emails
+preferredContactMethod | String | O | Different modes of contacting customer. Its a ENUM. Values are: EMAIl, TELEPHONE, MAIL, SMS, EMAIL_SMS, PRIMARY_VOICE, PRIMARY_TEXT, SECONDARY_VOICE, SECONDARY_TEXT
 preferredTimeOfDayForContact | String | O | Best time to contact customer
-orderConfirmationByEmailPermissionIndicator | boolean | O | Permission to send the order confirmation email
+orderConfirmationByEmailPermissionIndicator | boolean | O | Permission to send the Order Confirmation Email
 [additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional contact details will be populated as code value pair under this structure
-
-### preferredContactMethod
-
-Parameter  | Data Type | Required | Value Rules
----------  | --------- | -------- | -----------
-enum | String | O |	Modes for contacting customer 
 
 
 ### orderSource
 
 Parameter  | Data Type | Required | Value Rules
 ---------  | --------- | -------- | -----------
-channel | String | R | Order Source Channel
+channel | String | R | Order Channel. Example: DE-MOBILITY, CRU-MOBILITY, CDE-HS, SMB-WEB_CENTER, etc.
 salesChannelType | String | O| 
-application | String | R | Order Source Application
-sequence | number | O | 
+application | String | R | Source Application Name. Example: MYATTSALES, PREMIER, etc.
+sequence | number | O | Applicable when orderType is UPDATE, indicates the number of updates
 [additionalDetails](#additionaldetails)	|	Array	|	O	|	Any additional order source details will be populated as code value pair under this structure
 
 
